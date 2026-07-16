@@ -309,9 +309,8 @@
 
   /* ===== activities ===== */
   #acts{margin-top:var(--s4)}
-  .arows{display:grid;gap:8px;padding:0}
-  .arows{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;align-items:start}
-  .arow{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;border:1px solid var(--rule);border-radius:var(--r-sm);background:var(--card);text-decoration:none;color:var(--ink);transition:border-color .14s,background .14s}
+  .arows{columns:2;column-gap:12px;padding:0}
+  .arow{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;border:1px solid var(--rule);border-radius:var(--r-sm);background:var(--card);text-decoration:none;color:var(--ink);transition:border-color .14s,background .14s;break-inside:avoid;margin-bottom:8px}
   @media(hover:hover){.arow:hover{border-color:var(--azur);background:rgba(59,82,101,.05)}}
   .arow:active{transform:scale(.995)}
   .arow .nm{flex:1;min-width:0;font-weight:600;font-size:15.5px;line-height:1.3}
@@ -323,8 +322,8 @@
   .extra-num{flex:0 0 auto;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--sand);border:2px solid var(--rule2);box-shadow:0 1px 4px rgba(30,38,43,.16);font-family:'JetBrains Mono',monospace;font-weight:600;font-size:10px;color:var(--ink);margin-top:1px}
   @media(hover:hover){.arow:hover .go{color:var(--azur)}}
   @media(max-width:640px){
-    .arows{gap:8px;align-items:stretch}
-    .arow{position:relative;display:grid;grid-template-columns:20px minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:3px 7px;padding:10px 23px 9px 9px;align-items:start;min-height:104px;height:100%}
+    .arows{columns:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:stretch}
+    .arow{margin-bottom:0;position:relative;display:grid;grid-template-columns:20px minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:3px 7px;padding:10px 23px 9px 9px;align-items:start;min-height:104px;height:100%}
     .arow .nm{font-size:13.5px;line-height:1.2;display:block}
     .arow .ad{font-size:11.5px;line-height:1.3;margin-top:3px}
     .arow .atip{display:none}
@@ -423,57 +422,60 @@
               <stop offset="1" stop-color="#E2E7E4" stop-opacity="0"/>
             </linearGradient>
           </defs>
-          <path d="M-6 178 C 60 154, 118 170, 168 152 C 214 136, 240 150, 284 142 C 330 134, 356 120, 396 113 C 436 106, 472 98, 526 88 L 526 -6 L -6 -6 Z" fill="url(#gLand)"/>
+          <path d="M-6 196 C 14 192, 34 184, 46 174 C 48 172, 50 169, 52 167 C 68 161, 86 162, 104 160 C 108 159, 112 158, 115 155 C 117 151, 120 146, 123 150 C 125 153, 128 156, 134 155 C 144 157, 158 156, 172 153 C 178 152, 184 150, 189 148 C 191 147, 193 144, 195 144 C 197 144, 199 147, 202 148 C 212 151, 222 149, 231 147 C 234 146, 236 143, 238 143 C 240 143, 242 145, 246 145 C 252 145, 257 144, 262 143 C 284 139, 306 135, 324 129 C 338 125, 348 121, 360 117 C 382 112, 404 109, 424 105 C 444 101, 458 99, 468 98 C 471 97, 473 95, 475 91 C 477 86, 480 82, 483 86 C 485 89, 488 92, 494 90 C 504 87, 514 85, 526 82 L 526 -6 L -6 -6 Z" fill="url(#gLand)"/>
           <circle cx="400" cy="4" r="40" fill="var(--sun)" opacity=".14"/>
           <circle cx="400" cy="4" r="29" fill="url(#gSun)"/>
           <circle cx="400" cy="4" r="37" fill="none" stroke="var(--sun)" stroke-width="1.4" opacity=".4"/>
-          <path d="M-6 178 C 60 154, 118 170, 168 152 C 214 136, 240 150, 284 142 C 330 134, 356 120, 396 113 C 436 106, 472 98, 526 88 L 526 300 L -6 300 Z" fill="url(#gSea)"/>
-          <path d="M-6 210 Q 60 204 126 210 T 258 210 T 390 210 T 526 208" fill="none" stroke="var(--azur)" stroke-width="1.4" opacity=".22"/>
-          <path d="M-6 244 Q 60 238 126 244 T 258 244 T 390 244 T 526 242" fill="none" stroke="var(--azur)" stroke-width="1.4" opacity=".18"/>
+          <path d="M-6 196 C 14 192, 34 184, 46 174 C 48 172, 50 169, 52 167 C 68 161, 86 162, 104 160 C 108 159, 112 158, 115 155 C 117 151, 120 146, 123 150 C 125 153, 128 156, 134 155 C 144 157, 158 156, 172 153 C 178 152, 184 150, 189 148 C 191 147, 193 144, 195 144 C 197 144, 199 147, 202 148 C 212 151, 222 149, 231 147 C 234 146, 236 143, 238 143 C 240 143, 242 145, 246 145 C 252 145, 257 144, 262 143 C 284 139, 306 135, 324 129 C 338 125, 348 121, 360 117 C 382 112, 404 109, 424 105 C 444 101, 458 99, 468 98 C 471 97, 473 95, 475 91 C 477 86, 480 82, 483 86 C 485 89, 488 92, 494 90 C 504 87, 514 85, 526 82 L 526 300 L -6 300 Z" fill="url(#gSea)"/>
+          <path d="M-6 214 Q 60 208 126 214 T 258 214 T 390 214 T 526 212" fill="none" stroke="var(--azur)" stroke-width="1.4" opacity=".22"/>
+          <path d="M-6 246 Q 60 240 126 246 T 258 246 T 390 246 T 526 244" fill="none" stroke="var(--azur)" stroke-width="1.4" opacity=".18"/>
           <g stroke="var(--sun)" stroke-linecap="round">
             <path d="M387 207 H 413" stroke-width="3.5" opacity=".5"/>
             <path d="M391 218 H 409" stroke-width="3" opacity=".38"/>
             <path d="M388 230 H 412" stroke-width="3" opacity=".28"/>
             <path d="M394 243 H 406" stroke-width="2.5" opacity=".2"/>
           </g>
-          <g transform="translate(148,206)"><path d="M0 0 L8 -19 L10.5 0 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1"/><path d="M-3.5 1 H14 L10.5 5.5 H0 Z" fill="var(--ink)" opacity=".85"/></g>
-          <g transform="translate(322,226) scale(.78)"><path d="M0 0 L8 -19 L10.5 0 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2"/><path d="M-3.5 1 H14 L10.5 5.5 H0 Z" fill="var(--ink)" opacity=".85"/></g>
+          <g transform="translate(148,212)"><path d="M0 0 L8 -19 L10.5 0 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1"/><path d="M-3.5 1 H14 L10.5 5.5 H0 Z" fill="var(--ink)" opacity=".85"/></g>
+          <g transform="translate(322,228) scale(.78)"><path d="M0 0 L8 -19 L10.5 0 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2"/><path d="M-3.5 1 H14 L10.5 5.5 H0 Z" fill="var(--ink)" opacity=".85"/></g>
           <g stroke="var(--ink)" stroke-width="1.4" fill="var(--sand)" stroke-linejoin="round" opacity=".8">
-            <path d="M96 150 l16 -30 9 14 10 -20 14 36 Z"/>
-            <path d="M196 134 l13 -24 8 11 9 -16 12 29 Z"/>
-            <path d="M252 120 l13 -24 8 11 9 -16 12 29 Z"/>
-            <path d="M404 100 l12 -22 7 10 9 -15 11 27 Z"/>
+            <path d="M84 146 l16 -30 9 14 10 -20 14 36 Z"/>
+            <path d="M186 130 l13 -24 8 11 9 -16 12 29 Z"/>
+            <path d="M250 118 l13 -24 8 11 9 -16 12 29 Z"/>
+            <path d="M402 94 l12 -22 7 10 9 -15 11 27 Z"/>
           </g>
-          <path class="draw coast" pathLength="1" d="M-6 178 C 60 154, 118 170, 168 152 C 214 136, 240 150, 284 142 C 330 134, 356 120, 396 113 C 436 106, 472 98, 526 88" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
-          <path d="M514 -20 C 502 18, 488 58, 472 92" fill="none" stroke="var(--azur)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
-          <path class="dash" d="M54 164 C 120 150, 200 143, 258 143 C 330 133, 410 114, 466 99" fill="none" stroke="var(--azur)" stroke-width="1.6" opacity=".75"/>
-          <path class="dash" d="M48 172 C 36 200, 26 226, 18 250" fill="none" stroke="var(--coral)" stroke-width="1.6" opacity=".8"/>
+          <path class="draw coast" pathLength="1" d="M-6 196 C 14 192, 34 184, 46 174 C 48 172, 50 169, 52 167 C 68 161, 86 162, 104 160 C 108 159, 112 158, 115 155 C 117 151, 120 146, 123 150 C 125 153, 128 156, 134 155 C 144 157, 158 156, 172 153 C 178 152, 184 150, 189 148 C 191 147, 193 144, 195 144 C 197 144, 199 147, 202 148 C 212 151, 222 149, 231 147 C 234 146, 236 143, 238 143 C 240 143, 242 145, 246 145 C 252 145, 257 144, 262 143 C 284 139, 306 135, 324 129 C 338 125, 348 121, 360 117 C 382 112, 404 109, 424 105 C 444 101, 458 99, 468 98 C 471 97, 473 95, 475 91 C 477 86, 480 82, 483 86 C 485 89, 488 92, 494 90 C 504 87, 514 85, 526 82" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M512 -22 C 500 14, 488 50, 474 86" fill="none" stroke="var(--azur)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+          <path class="dash" d="M58 160 C 88 152, 112 146, 140 146 C 176 145, 208 142, 240 138 C 268 136, 300 131, 330 122 C 352 116, 372 111, 396 106 C 424 101, 446 97, 462 94" fill="none" stroke="var(--azur)" stroke-width="1.6" opacity=".75"/>
+          <path class="dash" d="M56 172 C 42 200, 30 226, 20 250" fill="none" stroke="var(--coral)" stroke-width="1.6" opacity=".8"/>
           <g stroke="var(--ink)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".7">
             <path d="M120 6 q4 -5 8 0 q4 -5 8 0"/>
             <path d="M154 20 q3.4 -4.2 6.8 0 q3.4 -4.2 6.8 0"/>
             <path d="M226 -8 q3 -4 6 0 q3 -4 6 0"/>
           </g>
-          <g transform="translate(318,128)">
+          <g transform="translate(300,122)">
             <path d="M-8 0 V-7 L0 -13 L8 -7 V0 Z" fill="var(--coral)" stroke="var(--ink)" stroke-width="1.1"/>
             <rect x="-1.8" y="-5.5" width="3.6" height="5.5" fill="var(--paper)"/>
             <path d="M-8 0 h16 M-5 0 v4 M5 0 v4" stroke="var(--ink)" stroke-width="1.1" fill="none"/>
           </g>
           <g font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1.2" fill="var(--muted)">
-            <circle cx="52" cy="166" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
-            <text x="44" y="188">Å</text>
-            <g class="pulse"><circle cx="110" cy="162" r="8" fill="var(--paper)" stroke="var(--coral)" stroke-width="2.6"/></g>
-            <circle cx="110" cy="162" r="2.7" fill="var(--ink)"/>
-            <text x="86" y="188" font-size="10" font-weight="600" fill="var(--ink)">REINE</text>
-            <circle cx="196" cy="147" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
-            <text x="166" y="168">NUSFJORD</text>
-            <circle cx="260" cy="143" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
-            <text x="242" y="164">LEKNES</text>
-            <circle cx="352" cy="122" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
-            <text x="300" y="110">HENNINGSVÆR</text>
-            <circle cx="470" cy="99" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
-            <text x="436" y="121">SVOLVÆR</text>
+            <circle cx="52" cy="167" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="44" y="189">Å</text>
+            <g class="pulse"><circle cx="106" cy="159" r="8" fill="var(--paper)" stroke="var(--coral)" stroke-width="2.6"/></g>
+            <circle cx="106" cy="159" r="2.7" fill="var(--ink)"/>
+            <text x="88" y="185" font-size="10" font-weight="600" fill="var(--ink)">REINE</text>
+            <circle cx="195" cy="148" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="166" y="169">NUSFJORD</text>
+            <circle cx="262" cy="143" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="244" y="164">LEKNES</text>
+            <circle cx="349" cy="128" r="6.5" fill="var(--sand)" stroke="var(--ink)" stroke-width="1.2"/>
+            <circle cx="359" cy="131.5" r="3" fill="var(--sand)" stroke="var(--ink)" stroke-width="1"/>
+            <path d="M350 121 L349 124" stroke="var(--ink)" stroke-width="1.1"/>
+            <circle cx="349" cy="128" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="298" y="108">HENNINGSVÆR</text>
+            <circle cx="468" cy="98" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="434" y="120">SVOLVÆR</text>
             <text x="8" y="264" font-size="8" fill="var(--coral-text)">LAUTTA → BODØ</text>
-            <text x="425" y="50" font-size="8" fill="var(--faint)">E10 · NARVIK</text>
+            <text x="380" y="66" font-size="8" fill="var(--faint)">E10 · NARVIK</text>
           </g>
           <text x="8" y="292" font-family="'JetBrains Mono',monospace" font-size="8.5" letter-spacing="1.5" fill="var(--faint)">LOFOOTIT · 67.93°N 13.09°E</text>
         </svg>
@@ -701,14 +703,14 @@ const PLACES = [
   {n:'Bodø',cat:'transit',zone:'route',la:67.28835,lo:14.39415,d:'Lautan pääte mantereella: lataus ja lounas heti maissa ennen Silvervägeniä.',q:'Bodø ferjekai'},
 
   /* ---- Lofootit: nähtävyydet ---- */
-  {n:'Austnesfjorden',cat:'sight',zone:'lofoten',la:68.3159,lo:14.7160,d:'Nasjonal turistveg -levähdyspaikka vuonon rannalla, jossa Lofoottien seinämä avautuu ensimmäistä kertaa.',pr:'ilmainen',q:'Austnesfjorden rasteplass'},
+  {n:'Austnesfjorden',cat:'sight',zone:'lofoten',la:68.3159,lo:14.7160,d:'Nasjonal turistveg -levähdyspaikka vuonon rannalla, jossa Lofoottien seinämä avautuu ensimmäistä kertaa.',pr:'ilmainen',q:'Austnesfjorden'},
   {n:'Henningsvær',cat:'sight',zone:'lofoten',la:68.1548,lo:14.2031,star:1,d:'"Lofoottien Venetsia": kalastajakylä saarten päällä, galleriat, kahvilat ja maailmankuulu jalkapallostadion.',pr:'ilmainen',tip:'Kävele stadionille aallonmurtajalle, joka on saariston kuuluisin kuvapaikka.',q:'Henningsvær'},
   {n:'KaviarFactory',cat:'sight',zone:'lofoten',la:68.1553,lo:14.2013,d:'Nykytaidegalleria vanhassa kaviaaritehtaassa: Ai Weiwei, Abramović ja pohjoismaista kärkeä.',pr:'120 NOK',tip:'Kesällä ~11-18, mutta aukiolotieto on ristiriitainen, joten varmista IG/FB ennen käyntiä.',q:'KaviarFactory Henningsvær'},
   {n:'Lofotr Viikinkimuseo',cat:'sight',zone:'lofoten',la:68.2442,lo:13.7576,star:1,d:'Maailman pisin rekonstruoitu viikinkipäällikön pitkätalo (83 m) Borgissa, elävä museo pukuineen ja pajoineen.',pr:'265 NOK',tip:'Auki joka päivä 10-19. Kokeile jousiammuntaa ja viikinkilaivan soutua.',q:'Lofotr Viking Museum'},
-  {n:'Torvdalshalsen',cat:'sight',zone:'lofoten',la:68.2630,lo:13.8267,d:'Ajettava turistveg-näköalapysäkki, josta koko Vestvågøy ja rannikko näkyvät yhdellä silmäyksellä.',pr:'ilmainen',q:'Torvdalshalsen rasteplass'},
+  {n:'Torvdalshalsen',cat:'sight',zone:'lofoten',la:68.2630,lo:13.8267,d:'Ajettava turistveg-näköalapysäkki, josta koko Vestvågøy ja rannikko näkyvät yhdellä silmäyksellä.',pr:'ilmainen',q:'Torvdalshalsen'},
   {n:'Eggum «Hode»',cat:'sight',zone:'lofoten',la:68.3081,lo:13.6847,d:'Markus Raetzin veistos, joka vaihtaa muotoa kiertäessä + karu ulkomeren rantatie ja WWII-rauniot.',pr:'P-maksu',q:'Eggum Lofoten'},
   {n:'Nusfjord',cat:'sight',zone:'lofoten',la:68.0354,lo:13.3477,star:1,d:'Norjan parhaiten säilynyt kalastajakylä, elävä ulkomuseo rorbuineen ja kuivakalatelineineen.',pr:'100 NOK',tip:'Portti aukeaa aamusta, jolloin kylä on lähes tyhjä.',q:'Nusfjord'},
-  {n:'Hamnøyn kuvasilta',cat:'sight',zone:'lofoten',la:67.94753,lo:13.13152,star:1,d:'Lofoottien kuvatuin näkymä: punaiset rorbut ja Festhælenin seinämä E10-sillalta.',pr:'ilmainen',tip:'Kuvaa sillan jalkakäytävältä ja jätä auto levikkeelle, ei sillalle.',q:'Eliassen Rorbuer Hamnøy'},
+  {n:'Hamnøyn kuvasilta',cat:'sight',zone:'lofoten',la:67.94753,lo:13.13152,star:1,d:'Lofoottien kuvatuin näkymä: punaiset rorbut ja Festhælenin seinämä E10-sillalta.',pr:'ilmainen',tip:'Kuvaa sillan jalkakäytävältä ja jätä auto levikkeelle, ei sillalle.',q:'Hamnøy'},
   {n:'Sakrisøy',cat:'sight',zone:'lofoten',la:67.94152,lo:13.11174,d:'Keltaiset 1800-luvun mökit turkoosin salmen ja jyrkkien huippujen välissä.',pr:'ilmainen',q:'Sakrisøy'},
   {n:'Reine',cat:'sight',zone:'lofoten',la:67.9325,lo:13.0888,star:1,d:'"Norjan kaunein kylä" Reinefjordenin suulla, postikorttien vakiokuva.',pr:'ilmainen',tip:'Pysäköi vain merkityille paikoille, sillä kylä on ahdas ja valvottu.',q:'Reine Lofoten'},
   {n:'Å i Lofoten',cat:'sight',zone:'lofoten',la:67.8796,lo:12.9840,d:'E10:n päätepiste: kalastajakylämuseo, kuivakalamuseo ja tien pää -kyltti.',pr:'museo 155 NOK',tip:'Fiskeværsmuseum auki 10-18; Tørrfiskmuseumin aukiolo vaihtelee.',q:'Å i Lofoten'},
@@ -732,7 +734,7 @@ const PLACES = [
   {n:'Anita\'s Seafood',cat:'food',zone:'lofoten',la:67.9418,lo:13.1119,star:1,d:'Sakrisøyn legendaarinen kalapuoti: fish burger, katkarapuleivät ja kuivakalasnacksit.',pr:'burger ~200 NOK',tip:'Joka päivä ~11-19, ei varauksia, mutta jono etenee nopeasti.',q:'Anitas Sjømat Sakrisøy'},
   {n:'Henningsvær Lysstøperi & Café',cat:'food',zone:'lofoten',la:68.1545,lo:14.2021,d:'Kynttilävalimo-kahvila: kuuluisat kanelipullat ja hyvä kahvi.',pr:'€',tip:'Kesällä auki päivittäin ~11.30-18.',q:'Henningsvær Lysstøperi'},
   {n:'Klatrekaféen',cat:'food',zone:'lofoten',la:68.1553,lo:14.2055,d:'Kiipeilijöiden kahvila-ravintola Henningsværissä: burgerit, rento meno ja livemusaa viikonloppuisin.',pr:'€€',q:'Klatrekafeen Henningsvær'},
-  {n:'Bakeriet i Å',cat:'food',zone:'lofoten',la:67.8808,lo:12.9818,d:'1800-luvun kiviuunileipomo tien päässä, kanelipullat suoraan puu-uunista.',pr:'pulla ~50 NOK',tip:'Auki 9-15 ja pullat loppuvat, joten mene ennen puoltapäivää.',q:'Bakeriet i Å'},
+  {n:'Bakeriet i Å',cat:'food',zone:'lofoten',la:67.8808,lo:12.9818,d:'1800-luvun kiviuunileipomo tien päässä, kanelipullat suoraan puu-uunista.',pr:'pulla ~50 NOK',tip:'Auki 9-15 ja pullat loppuvat, joten mene ennen puoltapäivää.',q:'Bakeriet i Å Lofoten'},
   {n:'Gammelbua',cat:'food',zone:'lofoten',la:67.93536,lo:13.08845,d:'Reinen historiallinen krouvi (1790), illallinen vanhassa kauppapaikassa.',pr:'€€€',q:'Gammelbua Reine'},
   {n:'Sokeri-Jussin Kievari',cat:'food',zone:'route',la:65.01695,lo:25.45928,d:'Perinnekievari Pikisaaren puutalossa, pohjoista lähiruokaa lauantai-iltaan.',pr:'€€',q:'Sokeri-Jussin Kievari Oulu'},
   {n:'Bistro Norrland',cat:'food',zone:'route',la:65.58503,lo:22.14282,d:'Norrlantilaista lähiruokaa Luleån keskustassa, kävelymatkan päässä hotellilta.',pr:'€€',tip:'Auki torstaisin iltaan.',q:'Bistro Norrland Luleå'},
@@ -740,13 +742,13 @@ const PLACES = [
   /* ---- illat & aktiviteetit ---- */
   {n:'Trevarefabrikken',cat:'bar',zone:'lofoten',la:68.15301,lo:14.19986,d:'Vanha puusepäntehdas Henningsværissä: kahvila, sauna, auringonlaskudrinkit ja livemusiikkia.',pr:'€€',tip:'Keskiyön auringon terassi on kesäiltojen paikka.',q:'Trevarefabrikken Henningsvær'},
   {n:'Trollfjord-risteily (RIB)',cat:'trip',zone:'lofoten',la:68.23213,lo:14.56471,d:'Merikotkasafari kapeaan Trollfjordiin RIB-veneellä Svolværin torilta (~2 h).',pr:'~1 100 NOK',tip:'Varaa netistä; aja sään mukaan: tyyni päivä on paras.',q:'RIB Lofoten Svolvær'},
-  {n:'Reinefjordenin melonta',cat:'trip',zone:'lofoten',la:67.93521,lo:13.08920,d:'Aamumelonta peilityynellä vuonolla, monen mielestä reissun maagisin tunti.',pr:'~800 NOK',q:'Reine Adventure kayak'},
+  {n:'Reinefjordenin melonta',cat:'trip',zone:'lofoten',la:67.93521,lo:13.08920,d:'Aamumelonta peilityynellä vuonolla, monen mielestä reissun maagisin tunti.',pr:'~800 NOK',q:'Reine Adventure Lofoten'},
 
   /* ---- vaellukset ---- */
-  {n:'Reinebringen',cat:'hike',zone:'lofoten',la:67.9278,lo:13.0714,star:1,d:'Lofoottien ikonisin näkymä: 1 978 sherpa-porrasta Reinen ja vuonojen ylle (448 m).',pr:'ilmainen',tip:'Tarkista polun tilanne (kivivyöryhuollot) FB:stä 1-2 pv ennen. Jyrkkä nousu, joten kunnon kengät jalkaan.',q:'Reinebringen trailhead'},
-  {n:'Ryten & Kvalvika -vaellus',cat:'hike',zone:'lofoten',la:68.0893,lo:13.0929,star:1,d:'Monen mielestä saariston paras päivävaellus: Ryten-huippu (543 m) ja kuuluisa kielekekuva Kvalvikan yllä.',pr:'3-5 h',tip:'Lähtö Innersandin maksulliselta parkilta.',q:'Ryten Lofoten'},
+  {n:'Reinebringen',cat:'hike',zone:'lofoten',la:67.9278,lo:13.0714,star:1,d:'Lofoottien ikonisin näkymä: 1 978 sherpa-porrasta Reinen ja vuonojen ylle (448 m).',pr:'ilmainen',tip:'Tarkista polun tilanne (kivivyöryhuollot) FB:stä 1-2 pv ennen. Jyrkkä nousu, joten kunnon kengät jalkaan.',q:'Reinebringen'},
+  {n:'Ryten & Kvalvika -vaellus',cat:'hike',zone:'lofoten',la:68.0893,lo:13.0929,star:1,d:'Monen mielestä saariston paras päivävaellus: Ryten-huippu (543 m) ja kuuluisa kielekekuva Kvalvikan yllä.',pr:'3-5 h',tip:'Lähtö Innersandin maksulliselta parkilta.',q:'Ryten Fredvang'},
   {n:'Offersøykammen',cat:'hike',zone:'lofoten',la:68.1613,lo:13.5019,d:'Lyhyt E10-varren huippu: täysi 360° Nappstraumenin ja rantojen yli pienellä vaivalla.',pr:'1-2 h',q:'Offersøykammen'},
-  {n:'Mannen',cat:'hike',zone:'lofoten',la:68.2037,lo:13.5202,d:'Hauklandin ja Uttakleivin välinen harjanne: molemmat rannat yhdellä helpolla nousulla.',pr:'1-1,5 h',q:'Mannen Lofoten'},
+  {n:'Mannen',cat:'hike',zone:'lofoten',la:68.2037,lo:13.5202,d:'Hauklandin ja Uttakleivin välinen harjanne: molemmat rannat yhdellä helpolla nousulla.',pr:'1-1,5 h',q:'Mannen Haukland'},
   {n:'Festvågtind',cat:'hike',zone:'lofoten',la:68.1781,lo:14.2253,d:'Henningsværin klassikkonäköala (541 m): kylä ja saaret lintuperspektiivistä.',pr:'~2 h',q:'Festvågtind'},
   {n:'Fløya & Djevelporten',cat:'hike',zone:'lofoten',la:68.25084,lo:14.59798,d:'Svolværin panoraamahuippu ja kuuluisa rotkoon juuttunut kivi, Pirunportti.',pr:'2-3 h',q:'Djevelporten'}
 ];
@@ -777,7 +779,7 @@ const DAYS = [
   rows:[
    {t:'08:30',i:'move',x:'<b>Lähtö Oulusta</b> (checkout 12 mennessä, mutta matkaan ajoissa) → Tornio/Haparanda',dur:'~1 h 45'},
    {t:'10:00',i:'move',x:'Raja Ruotsiin ja E10:tä pohjoiseen: Överkalix → Gällivare. <b>Kello −1 h</b>'},
-   {t:'12:30',i:'food',x:'Latauslounas '+GL('Gällivare laddstation','Gällivaressa'),dur:'45 min'},
+   {t:'12:30',i:'food',x:'Latauslounas '+GL('Gällivare','Gällivaressa'),dur:'45 min'},
    {t:'14:30',i:'move',x:'Ohitse '+GL('Kiruna','Kirunan')+', kaivoskaupungin, jonka koko keskustaa siirretään parhaillaan',opt:1},
    {t:'16:00',i:'move',x:'Riksgränsen & Bjørnfjell: tunturiylitys Norjaan, E10:n hienoin mantereen osuus'},
    {t:'17:00',i:'move',x:'Perillä: '+G('Airbnb Vassdalen','Airbnb Vassdalenissa')+' (check-in klo 17 jälkeen)'},
