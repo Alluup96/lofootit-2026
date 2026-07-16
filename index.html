@@ -713,6 +713,7 @@ const PLACES = [
   {n:'Hamnøyn kuvasilta',cat:'sight',zone:'lofoten',la:67.945395,lo:13.128229,star:1,d:'Tunnettu näkymä punaisiin rorbuihin, satamaan ja Festhælenin vuoreen E10-sillan suunnasta.',pr:'ilmainen',tip:'Kuvaa jalkakäytävältä ja jätä auto sallitulle pysäköintipaikalle, ei sillalle.',q:'Hamnoy Bridge Photo Spot'},
   {n:'Sakrisøy',cat:'sight',zone:'lofoten',la:67.94152,lo:13.11174,d:'Pieni kalastajasaari, joka tunnetaan keltaisista rorbuistaan ja vuonomaisemastaan.',pr:'ilmainen',q:'Sakrisøy'},
   {n:'Reine',cat:'sight',zone:'lofoten',la:67.9325,lo:13.0888,star:1,d:'Tunnettu kalastajakylä Reinefjordenin suulla, jyrkkien vuorten ja saarien ympäröimänä.',pr:'ilmainen',tip:'Pysäköi vain merkityille paikoille; kylässä on vähän tilaa ja kesällä paljon liikennettä.',q:'Reine Lofoten'},
+  {n:'Reinehalsen',cat:'sight',zone:'lofoten',la:67.92818563,lo:13.08340025,d:'Nasjonal turistveg Lofotenin esteetön näköalapaikka Reinen kylään, vuonolle ja vuorijonolle.',pr:'ilmainen',tip:'Lyhyt kuvauspysähdys ennen Reinebringeniä.',q:'Reinehalsen viewpoint'},
   {n:'Å i Lofoten',cat:'sight',zone:'lofoten',la:67.8796,lo:12.9840,d:'E10:n päätepiste: kalastajakylämuseo, kuivakalamuseo ja tien pää -kyltti.',pr:'museo 155 NOK',tip:'Fiskeværsmuseum auki 10-18; Tørrfiskmuseumin aukiolo vaihtelee.',q:'Å i Lofoten'},
   {n:'Svolværgeita',cat:'sight',zone:'lofoten',la:68.2462,lo:14.5885,d:'Svolværin ikoninen "Vuohi"-kalliopiikki sataman yllä. Rohkeimmat kiipeävät sarvien väliin (opastettuna).',pr:'ilmainen katsoa',q:'Svolværgeita'},
   {n:'Gammelstadin kirkkokaupunki',cat:'sight',zone:'route',la:65.64490,lo:22.02828,star:1,d:'UNESCO-kohde Luleåssa: yli 400 punaista kirkkotupaa 1400-luvun kivikirkon ympärillä.',pr:'ilmainen',tip:'Aamukierros ennen ajopäivää, vain 10 minuuttia hotellilta.',q:'Gammelstad Church Town'},
@@ -721,6 +722,7 @@ const PLACES = [
   /* ---- Lofootit: rannat ---- */
   {n:'Hauklandstranda',cat:'beach',zone:'lofoten',la:68.1980,lo:13.5292,star:1,d:'Valkohiekkainen Atlantin ranta, jota ympäröivät jyrkät vuoret ja kirkas vesi.',pr:'ilmainen',tip:'Rannalla on palveluita kesäkaudella. Mannenin reitti alkaa alueelta.',q:'Haukland Beach'},
   {n:'Uttakleiv',cat:'beach',zone:'lofoten',la:68.2137,lo:13.5083,d:'Villimpi naapuriranta: "Lofoottien silmä" -kivimuodostelma ja lampaita rannalla.',pr:'P-maksu',q:'Uttakleiv Beach'},
+  {n:'Rambergstranda',cat:'beach',zone:'lofoten',la:68.09839399,lo:13.24625977,d:'Nasjonal turistveg Lofotenin valkohiekkainen rantapysähdys Rambergin kylässä.',pr:'ilmainen',tip:'Lyhyt pysähdys puiselle rantapolulle matkalla Beach Campille.',q:'Rambergstranda'},
   {n:'Skagsanden',cat:'beach',zone:'lofoten',la:68.1066,lo:13.2951,d:'Surffareiden ja valokuvaajien ranta, jossa märkä hiekka peilaa vuoret. Beach Campin kotiranta.',pr:'ilmainen',q:'Skagsanden Beach'},
   {n:'Kvalvika',cat:'beach',zone:'lofoten',la:68.0769,lo:13.0963,d:'Vain jalan saavutettava ranta jyrkänteiden välissä Rytenin alueella.',pr:'ilmainen',tip:'Kesällä 2026 Rytenin alueella tehdään polkutöitä ja reittejä voidaan sulkea; tarkista Visit Lofotenin ajantasainen tiedote.',q:'Kvalvika Beach'},
   {n:'Unstad',cat:'beach',zone:'lofoten',la:68.26521,lo:13.59126,d:'Tunnettu arktinen surffiranta, jossa toimii surffikeskus palveluineen.',q:'Unstad Arctic Surf'},
@@ -795,9 +797,9 @@ const DAYS = [
    {t:'13:00',i:'sight',x:G('Austnesfjorden','Austnesfjordenin levähdyspaikka')+', ensimmäinen postikorttipysähdys',dur:'20 min'},
    {t:'13:30',i:'food',x:'Lounas + lataus + ruokaostokset: '+G('Svolvær')+', Våganin keskus',dur:'1 h 15'},
    {t:'15:00',i:'move',x:'Check-in '+G('Skårungen','Skårungen (ZONE A)')+'. Varatkaa samalla sauna- ja paljuvuoro respasta'},
-   {t:'15:30',i:'sight',x:G('Henningsvær')+': kylän ja stadionin kierros; jos aikaa ja paikka on auki, valitse joko '+G('KaviarFactory')+' tai kahvit '+G('Henningsvær Lysstøperi & Café','Lysstøperissä'),dur:'45 min'},
-   {t:'16:15',i:'hike',x:G('Festvågtind')+', jyrkkä näköalavaellus kylän ylle. Käänny viimeistään klo 17.30, jotta ehdit varattuun illalliseen',dur:'enintään 2 h 30'},
-   {t:'19:15',i:'food',x:'Illallinen: '+G('Fiskekrogen')+' <i class="eur">€€€</i> satamalaiturilla. <b>Pöytävaraus klo 19:15 ✓</b>',dur:'1,5 h'}
+   {t:'15:30',i:'hike',x:G('Festvågtind')+', jyrkkä näköalavaellus kylän ylle. Käänny viimeistään klo 17.00, jotta ehdit rauhassa varattuun illalliseen',dur:'2–3 h'},
+   {t:'19:15',i:'food',x:'Illallinen: '+G('Fiskekrogen')+' <i class="eur">€€€</i> satamalaiturilla. <b>Pöytävaraus klo 19:15 ✓</b>',dur:'1,5 h'},
+   {t:'20:45',i:'sight',x:'Halutessa iltakierros '+G('Henningsvær','Henningsværissä')+': satama, kylän kujat ja jalkapallokenttä',dur:'45 min',opt:1}
   ],
   night:'Koko ilta vietetään Henningsværissä, joten edestakaista ajoa ei tule. Paluu Skårungenille kestää noin 25 minuuttia valoisassa kesäyössä. Lataa leiripistokkeesta vain, jos se sisältyy varaukseen ja leirintäalue sallii auton latauksen.'},
 
@@ -807,8 +809,9 @@ const DAYS = [
    {t:'09:30',i:'sight',x:G('Torvdalshalsen')+'-näköala',dur:'15 min'},
    {t:'10:00',i:'sight',x:G('Lofotr Viikinkimuseo')+' Borgissa: pitkätalo, aktiviteetit ja laivasatama',dur:'3 h'},
    {t:'13:30',i:'food',x:'Lataus ja ostokset '+G('Leknes','Leknesissä')+' + lounas: '+G('Makalaus')+' <i class="eur">€€</i>',dur:'1 h'},
-   {t:'14:45',i:'beach',x:G('Hauklandstranda','Haukland')+' & '+G('Uttakleiv')+', kaksi erilaista Atlantin rantaa',dur:'2 h 15'},
-   {t:'17:15',i:'move',x:'Ajo '+G('Lofoten Beach Camp','Lofoten Beach Campille')+' ja drop-in-paikan varmistus; leirintä suosittelee saapumaan ennen klo 18'},
+   {t:'14:45',i:'beach',x:G('Hauklandstranda','Haukland')+' & '+G('Uttakleiv')+', kaksi erilaista Atlantin rantaa',dur:'1 h 30'},
+   {t:'16:45',i:'beach',x:'Lyhyt pysähdys '+G('Rambergstranda','Rambergstrandalla')+' matkalla leirintään',dur:'15 min'},
+   {t:'17:15',i:'move',x:'<b>Saapuminen '+G('Lofoten Beach Camp','Lofoten Beach Campille')+'</b> ja drop-in-paikan varmistus. <b>Oma takaraja klo 18</b>'},
    {t:'20:00',i:'food',x:'Illallinen oletettavasti '+G('Lofoten Beach Camp','Lofoten Beach Campilla')+'; keittiö tarjoilee pääruokia klo 15–21'},
    {t:'21:30',i:'beach',x:'Iltakävely '+G('Skagsanden','Skagsandenilla')+': surffareita ja peilikuvia valoisassa kesäillassa',dur:'1 h'}
   ],
@@ -822,7 +825,8 @@ const DAYS = [
    {t:'11:00',i:'sight',x:G('Å i Lofoten','Å:n kalastajakylämuseo')+'. E10 päättyy tähän; museo auki 10–18',dur:'1 h 15'},
    {t:'12:45',i:'sight',x:'Kuvapysähdykset: '+G('Hamnøyn kuvasilta','Hamnøyn silta')+' & '+G('Sakrisøy','Sakrisøyn keltaiset mökit'),dur:'45 min'},
    {t:'13:45',i:'food',x:'Lounas: '+G('Anita\'s Seafood','Anita\'s Seafood')+', tunnettu fish burger',dur:'45 min'},
-   {t:'14:45',i:'sight',x:G('Reine')+', kylän kierros vuonon suulla',dur:'45 min'},
+   {t:'14:40',i:'sight',x:G('Reine')+', lyhyt kyläkierros vuonon suulla',dur:'30 min'},
+   {t:'15:15',i:'sight',x:'Kuvauspysähdys '+G('Reinehalsen','Reinehalsenilla')+', näkymä Reineen ja Reinefjordille',dur:'15 min'},
    {t:'15:45',i:'hike',x:G('Reinebringen')+': 1 974 portaan osuus Reinefjordenin näkymiin',dur:'~3 h pysäköinnistä'},
    {t:'19:15',i:'move',x:'Check-in '+G('Moskenes Camping')+' sataman vieressä (portin koodi sähköpostista)'},
    {t:'20:00',i:'food',x:'Päätösillallinen Lofooteilla: '+G('Maren Anna','Maren Anna')+' <i class="eur">€€€</i> Sørvågenissa. <b>Varaa pöytä</b>',dur:'1,5 h'}
