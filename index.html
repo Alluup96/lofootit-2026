@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Lofootit 2026 -roadtrip 18.–25.7.2026. Mukana kartta, päiväohjelma, majoitukset ja aktiviteetit." />
+<meta name="theme-color" content="#F0F2F1" />
+<meta property="og:title" content="Lofootit 2026 · roadtrip-suunnitelma" />
+<meta property="og:description" content="Espoosta keskiyön auringon alle: Oulu · Bjerkvik · Lofootit · lautta Bodøhön · Luleå · Viitasaari. Kartta, päiväohjelma ja aktiviteetit 18.–25.7.2026." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fi_FI" />
+<title>Lofootit 2026 · roadtrip-suunnitelma</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+<style>
+  :root{
+    --paper:#F0F2F1; --sand:#E2E7E4; --card:#FAFBFA;
+    --ink:#1E262B; --muted:#4C5A61; --faint:#6D7B81;
+    --azur:#4E7189; --azur-deep:#375367; --sea:#5C8B82;
+    --coral:#A65A46; --sun:#B08A4F; --palm:#6C7F5E; --lilac:#7E7797;
+    --rule:#DCE1DD; --rule2:#C7CFC9;
+    --coral-text:#8C4A38; --lilac-text:#5D567C; --gold-text:#77602A;
+    --on-ink:#F2F5F4; --transit:#8F9894;
+    --btn:#3B5265; --btn-hover:#2C4050;
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px; --s7:32px; --s8:48px;
+    --r-xs:4px; --r-sm:10px; --r-md:14px; --r-lg:16px; --r-pill:99px;
+    --shadow:0 1px 2px rgba(30,43,54,.05), 0 8px 24px -12px rgba(30,43,54,.12);
+    --shadow-lg:0 2px 4px rgba(30,43,54,.06), 0 18px 40px -14px rgba(30,43,54,.2);
+    --ring:0 0 0 2px var(--paper), 0 0 0 4px rgba(59,82,101,.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{overflow-x:clip}
+  body{font-family:'EB Garamond',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 var(--s6)}
+  .mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+  a{color:var(--azur-deep)}
+  .mlink{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px dotted rgba(91,114,132,.6)}
+  .mlink:hover{color:var(--azur-deep)}
+  ::selection{background:rgba(59,82,101,.22)}
+  h1,h2,h3,h4{font-optical-sizing:auto;text-wrap:balance}
+  p{text-wrap:pretty}
+  section{scroll-margin-top:70px}
+  #saapumiset{padding-top:var(--s4)}
+  :focus-visible{outline:none;box-shadow:var(--ring);border-radius:10px}
+  .leaflet-container :focus-visible{box-shadow:none;outline:2px solid var(--azur)}
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+    .hero-art .draw{stroke-dashoffset:0}
+  }
+  @supports (animation-timeline: view()){
+    @media(prefers-reduced-motion:no-preference){
+      .day,.arow{animation:rise-in linear both;animation-timeline:view();animation-range:entry 0% entry 38%}
+    }
+  }
+  @keyframes rise-in{from{opacity:.3;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  /* ===== sticky nav ===== */
+  .nav{position:sticky;top:0;z-index:1000;background:rgba(240,242,241,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow .25s}
+  .nav::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--azur) 0%,var(--sea) 32%,var(--sun) 66%,var(--coral) 100%);opacity:.9}
+  .nav.scrolled{box-shadow:0 8px 28px -14px rgba(30,43,54,.22)}
+  .nav-in{max-width:1120px;margin:0 auto;padding:0 22px;display:flex;align-items:center;gap:18px;height:58px}
+  .brand{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;letter-spacing:-.01em;white-space:nowrap;color:var(--ink);text-decoration:none}
+  .brand em{font-style:italic;color:var(--coral)}
+  .tabs{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{font-size:15.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:9px 14px;border-radius:99px;white-space:nowrap;transition:color .15s,background .15s}
+  .tab:hover{color:var(--ink)}
+  .tab.on{background:var(--ink);color:var(--on-ink)}
+  .tab svg{display:none}
+  @media(max-width:760px){
+    .nav-in{flex-wrap:nowrap;gap:10px;padding:0 14px}
+    .brand{font-size:17px}
+    .tab{padding:7px 11px;font-size:13px}
+  }
+  /* mobiili: pohjanavigaatio peukalolle */
+  @media(max-width:640px){
+    body{padding-bottom:76px}
+    /* backdrop-filter tekisi navista fixed-lapsen containing blockin → pois mobiilissa */
+    .nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(240,242,241,.97)}
+    .nav-in{justify-content:center;height:52px}
+    .tabs{position:fixed;left:0;right:0;bottom:0;z-index:1200;margin:0;padding:6px max(12px,env(safe-area-inset-left)) calc(7px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-right));background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--rule);display:flex;justify-content:space-around;gap:2px;overflow:visible;box-shadow:0 -8px 28px -16px rgba(30,43,54,.25)}
+    .tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;font-weight:600;letter-spacing:.02em;padding:7px 8px;border-radius:13px;min-width:58px;color:var(--faint)}
+    .tab svg{display:block;width:21px;height:21px}
+    .tab.on{background:var(--ink);color:var(--on-ink)}
+    #map:fullscreen~.tabs,#map:-webkit-full-screen~.tabs{display:none}
+  }
+
+  /* ===== sections as tabs ===== */
+  .panel{display:none}
+  .panel.on{display:block;animation:fadein .25s ease}
+  @keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* ===== hero ===== */
+  .hero{padding:clamp(18px,3.5vw,56px) 0 clamp(12px,2.5vw,28px);background:
+    radial-gradient(1200px 420px at 85% -140px, rgba(91,114,132,.16), transparent 60%),
+    radial-gradient(900px 380px at -10% -120px, rgba(168,101,74,.12), transparent 55%)}
+  .kicker{font-size:12.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--coral-text)}
+  @media(max-width:640px){.kicker{font-size:10px;letter-spacing:.16em}}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(38px,7vw,80px);line-height:1.02;letter-spacing:-.02em;margin:16px 0 0}
+  h1 em{font-style:italic;color:var(--azur)}
+  .hero-cta{display:flex;gap:var(--s3);margin-top:var(--s7);flex-wrap:wrap}
+  .hero-inner{display:flex;gap:var(--s8);align-items:center}
+  .hero-toc{margin-top:var(--s6);display:flex;gap:var(--s2);position:relative;flex-wrap:wrap;max-width:620px}
+  .hero-toc::before{display:none}
+  @media(min-width:941px){
+    .hero-inner{flex-wrap:wrap}
+    .hero-toc{flex-basis:100%;max-width:none;margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--rule)}
+  }
+  .hero-toc a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:9px 16px;border-radius:99px;border:1px solid var(--rule2);background:var(--card);color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;line-height:1.2;transition:background .15s,color .15s,border-color .15s,transform .12s;box-shadow:none}
+  .hero-toc a:hover{border-color:var(--azur);color:var(--azur)}
+  .hero-toc a:active{transform:scale(.96)}
+  .hero-toc .tn{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--coral-text);font-weight:600}
+  .hero-copy{flex:1;min-width:0}
+  .hero-art{flex:0 0 min(560px,48%);margin:0}
+  .hero-art svg{width:100%;height:auto;display:block;border-radius:var(--r-md)}
+  @media(max-width:940px){.hero-inner{flex-direction:column;align-items:stretch;gap:var(--s3)}.hero-art{flex:none;max-width:none;margin-left:calc(-1*var(--s6));margin-right:calc(-1*var(--s6))}.hero-art svg{border-radius:0}
+    .hero-toc{margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:none}
+    .hero-toc a{min-height:44px;font-size:13.5px;padding:10px 12px;gap:7px;white-space:normal}.hero-cta{margin-top:var(--s5)}h1{margin-top:10px}}
+  .hero-art .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:drawline 1.3s cubic-bezier(.4,0,.2,1) forwards}
+  .hero-art .dash{stroke-dasharray:.5 6;stroke-linecap:round;stroke-dashoffset:0}
+  @keyframes drawline{to{stroke-dashoffset:0}}
+  .hero-art .pulse{transform-origin:center;transform-box:fill-box;animation:npulse 2.8s ease-in-out infinite}
+  @keyframes npulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.22);opacity:.7}}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  #kamppa .grid.g2>.card{display:flex;flex-direction:column}
+  #kamppa .grid.g2>.card .btnrow{margin-top:auto;padding-top:14px}
+  .gbtn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule2)}
+  .gbtn.ghost:hover{border-color:var(--azur);color:var(--azur);opacity:1}
+
+  /* ===== generic section ===== */
+  section{padding:var(--s8) 0 var(--s2)}
+  .panel section{content-visibility:auto;contain-intrinsic-size:700px}
+  .sec-head{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s2);flex-wrap:wrap}
+  .sec-head .n{font-family:'JetBrains Mono',monospace;color:var(--coral-text);font-size:13px;font-weight:600}
+  .sec-head h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.015em;line-height:1.15}
+  .sec-acc summary{display:flex;align-items:center;gap:var(--s3);cursor:pointer;list-style:none;padding:2px 0;-webkit-tap-highlight-color:transparent}
+  .sec-acc summary::-webkit-details-marker{display:none}
+  .sec-acc summary .sec-head{margin:0;flex:1;flex-wrap:nowrap;min-width:0}
+  .sec-acc summary .sec-head h2{min-width:0}
+  .sec-acc .chev{width:21px;height:21px;color:var(--faint);transition:transform .2s;flex:0 0 auto}
+  .sec-acc[open] .chev{transform:rotate(180deg)}
+  .sec-acc .sec-body{padding-top:var(--s3)}
+  .sec-sub{color:var(--muted);font-size:16.5px;max-width:720px;margin-bottom:26px}
+  .sec-sub b{color:var(--ink)}
+
+  /* ===== cards & grids ===== */
+  .grid{display:grid;gap:var(--s4)}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.g3{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md);padding:var(--s5);box-shadow:var(--shadow)}
+  .card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;letter-spacing:-.01em;line-height:1.3;margin-bottom:12px}
+  .card .ds{font-size:15px;color:var(--muted);margin-top:4px}
+  .pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.06em;padding:2px 8px;border-radius:99px;border:1px solid var(--rule2);color:var(--muted);text-transform:uppercase;white-space:nowrap}
+  .pill.blue{color:var(--azur);border-color:rgba(59,82,101,.4);background:rgba(59,82,101,.08)}
+  .pill.coral{color:var(--coral-text);border-color:rgba(168,101,74,.4);background:rgba(168,101,74,.06)}
+  .pill.gold{color:var(--gold-text);border-color:rgba(176,138,79,.45);background:rgba(176,138,79,.08)}
+  .pill.palm{color:var(--palm);border-color:rgba(113,128,91,.4);background:rgba(113,128,91,.07)}
+  .pill.lilac{color:var(--lilac-text);border-color:rgba(141,124,153,.4);background:rgba(141,124,153,.07)}
+
+  /* ===== arrivals ===== */
+  .fcard h3{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+  .fcard h3 svg{width:19px;height:19px;color:var(--azur);flex:0 0 auto}
+  .fcard .fsub{font-family:'EB Garamond',serif;font-weight:500;color:var(--faint);font-size:12.5px}
+  .frow{padding:10px 0;border-top:1px dashed var(--rule2)}
+  .frow:first-of-type{border-top:0}
+  .fwho{font-weight:700;font-size:16px}
+  .fdet{font-size:12px;color:var(--azur-deep);margin-top:2px}
+  .fnote{font-size:13.5px;color:var(--muted);margin-top:2px}
+
+  /* ===== info rows ===== */
+  .kv{display:grid;grid-template-columns:130px 1fr;gap:4px 14px;font-size:15.5px}
+  .kv dt{color:var(--faint);font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
+  .kv dd{color:var(--ink)}
+  .kv dd b{font-weight:600}
+  @media(max-width:520px){.kv{grid-template-columns:1fr}.kv dt{margin-top:6px}}
+  .weather-list{display:grid;gap:11px;font-size:15.5px}
+  .weather-row{display:grid;grid-template-columns:130px 1fr;gap:4px 14px;align-items:baseline}
+  .weather-row dt{color:var(--faint);font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
+  .weather-row dd{color:var(--ink);font-size:15.5px;line-height:1.45}
+  .weather-main{font-weight:600;color:var(--ink)}
+  .weather-note{font:inherit;color:var(--muted)}
+  @media(max-width:520px){.weather-row{grid-template-columns:1fr;gap:2px}.weather-row dt{padding-top:0}}
+
+  /* ===== map ===== */
+  .gbar{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;margin:var(--s4) 0}
+  @media(max-width:640px){
+    #daybar,#extrabar{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:var(--s2) calc(-1*var(--s6));padding:2px var(--s6)}
+    #daybar::-webkit-scrollbar,#extrabar::-webkit-scrollbar{display:none}
+    #daybar .chip-btn,#extrabar .chip-btn{flex:0 0 auto}
+    #daybar .gbtn{flex:0 0 auto}
+  }
+  .chip-btn{font-size:14px;font-weight:600;padding:9px 16px;min-height:40px;border-radius:99px;border:1px solid var(--rule2);background:var(--card);color:var(--muted);cursor:pointer;transition:background .15s,color .15s,border-color .15s,transform .12s;font-family:'EB Garamond',serif}
+  @media(max-width:640px){.chip-btn{min-height:44px;padding:10px 16px}}
+  .chip-btn:hover{border-color:var(--azur);color:var(--azur)}
+  .chip-btn.on{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+  .gbar .spacer{flex:1}
+  .dblbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-right:2px;white-space:nowrap}
+  #daybar{margin:var(--s3) 0 var(--s1)}
+  #extrabar{margin:0 0 var(--s3);padding-left:calc(91px + var(--s2))}
+  #daybar .chip-btn{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;padding:6px 10px;min-height:34px;letter-spacing:.04em}
+  #extrabar .extra-map{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 12px 6px 10px;border-color:rgba(59,82,101,.28);background:rgba(251,250,246,.9);box-shadow:none;font-size:13px;color:var(--muted)}
+  #extrabar .extra-map::before{content:'';width:9px;height:9px;border-radius:50%;border:1.5px solid var(--gold-text);background:rgba(176,138,79,.08);flex:0 0 auto}
+  #extrabar .extra-map .extra-title{font-weight:600;color:var(--ink)}
+  #extrabar .extra-map .extra-sub{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--faint);letter-spacing:.04em}
+  #extrabar .extra-map.on{background:rgba(30,38,43,.1);border-color:rgba(30,38,43,.5);color:var(--ink)}
+  #extrabar .extra-map.on::before{background:var(--ink);border-color:var(--ink)}
+  #extrabar .extra-map.on .extra-title{color:var(--ink)}
+  #extrabar .extra-map.on .extra-sub{color:var(--muted)}
+  @media(max-width:640px){#daybar .chip-btn,#extrabar .chip-btn{min-height:36px}#extrabar{padding-left:var(--s6)}#extrabar .extra-map{min-height:36px}}
+  .gbtn{display:inline-flex;align-items:center;gap:7px;background:var(--btn);color:var(--on-ink);font-weight:600;font-size:15px;padding:10px 16px;border-radius:99px;text-decoration:none;transition:opacity .15s;border:none;cursor:pointer}
+  .gbtn:hover{background:var(--btn-hover)}
+  .gbtn:active{transform:translateY(1px)}
+  .gbtn.ghost:active{transform:translateY(1px)}
+  .tab:active{transform:scale(.96)}
+  .chip-btn:active{transform:scale(.96)}
+  .brand:hover em{color:var(--azur)}
+  .leaflet-popup-content a.go:hover{background:var(--btn-hover)}
+  #map{height:640px;width:100%;border:1px solid var(--rule2);border-radius:var(--r-lg);z-index:0;box-shadow:var(--shadow);background:#e8e6e1;position:relative;overflow:hidden}
+  @media(max-width:640px){#map{height:66vh;min-height:420px}}
+  #map:fullscreen,#map:-webkit-full-screen{width:100%!important;height:100%!important;border-radius:0;border:0}
+  #map.map-loading::after{content:'Kartta latautuu';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);background:linear-gradient(135deg,rgba(251,250,246,.92),rgba(233,228,218,.82));z-index:1}
+  #map.map-error::after{content:'Karttaa ei voitu ladata. Tarkista yhteys ja yritä uudelleen.';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--s6);font-size:15px;color:var(--muted);background:linear-gradient(135deg,rgba(251,250,246,.96),rgba(233,228,218,.9));z-index:1}
+  body.map-fullscreen{overflow:hidden}
+  body.map-fullscreen .nav{display:none}
+  body.map-fullscreen .panel section{content-visibility:visible;contain:none}
+  body.map-fullscreen .tabs{display:none}
+  body.map-fullscreen #map{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;min-height:100dvh!important;border:0!important;border-radius:0!important;z-index:2100;box-shadow:none}
+  body.map-fullscreen .leaflet-control-container{position:relative;z-index:2110}
+  .map-hint{font-size:12.5px;color:var(--faint);margin-top:10px}
+  .leaflet-container{font-family:'EB Garamond',serif}
+  .leaflet-popup-content-wrapper{border-radius:12px;box-shadow:0 12px 36px rgba(30,43,54,.22)}
+  .leaflet-popup-content{margin:14px 16px;font-size:13.5px;line-height:1.5;min-width:190px}
+  .leaflet-popup-content b.t{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15.5px;display:block;margin-bottom:2px;color:var(--ink)}
+  .leaflet-popup-content .m{color:var(--muted)}
+  .leaflet-popup-content .pr{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-text);margin-top:5px}
+  .leaflet-popup-content .tp{font-size:12px;color:var(--muted);margin-top:5px;border-left:2px solid var(--rule2);padding-left:8px}
+  .leaflet-popup-content a.go{display:inline-flex;gap:5px;margin-top:10px;color:var(--on-ink);background:var(--btn);text-decoration:none;font-weight:600;font-size:12.5px;padding:8px 14px;border-radius:99px}
+  .map-tip{background:rgba(255,255,255,.95);border:1px solid var(--rule2);color:var(--ink);font-weight:600;font-size:11px;padding:1px 7px;border-radius:5px;box-shadow:0 2px 8px rgba(30,43,54,.12)}
+  .map-tip::before{display:none}
+  .mk{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:#fff;border:2.5px solid var(--azur);box-shadow:0 2px 8px rgba(30,43,54,.28);position:relative}
+  .mk-home{border-color:var(--ink);background:var(--ink);color:#fff;font-size:13px}
+  .mk2{width:100%;height:100%;border-radius:50%;background:#fff;border:3px solid var(--azur);box-shadow:0 1px 6px rgba(30,43,54,.3)}
+  .mk2-dot{border-width:2.5px;box-shadow:0 1px 4px rgba(30,43,54,.26)}
+  .mk2-num{display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:11px;color:var(--ink);background:var(--sand);border-width:1.5px;border-color:rgba(30,38,43,.72);box-shadow:0 0 0 1px rgba(251,250,246,.92),0 1px 5px rgba(30,43,54,.28)}
+  .c-homey{border-color:var(--ink)}
+  .c-sight{border-color:var(--azur)}.c-food{border-color:var(--coral)}.c-bar{border-color:var(--lilac)}
+  .c-beach{border-color:var(--sea)}.c-trip{border-color:var(--sun)}.c-hike{border-color:var(--palm)}.c-transit{border-color:var(--transit)}
+  .fs-btn{font-size:17px;font-weight:700;text-align:center;line-height:34px!important;width:36px!important;height:36px!important;display:block;background:#fff;color:var(--ink);text-decoration:none}
+  .fs-btn:hover{background:#f2eee4}
+
+  /* ===== days / timeline ===== */
+  .day{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-lg);overflow:hidden;margin-bottom:var(--s5);box-shadow:var(--shadow)}
+  .day-h{display:flex;align-items:center;gap:var(--s4);padding:var(--s4) var(--s6);border-bottom:1px solid var(--rule);flex-wrap:nowrap;background:linear-gradient(0deg, rgba(233,228,218,.55), rgba(233,228,218,.2))}
+  .day-h>div{flex:1;min-width:0}
+  .day-date{flex:0 0 auto;width:48px;height:48px;border-radius:var(--r-md);background:var(--ink);color:var(--on-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;box-shadow:var(--shadow)}
+  .day-date .dw{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+  .day-date .dn{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;letter-spacing:-.01em}
+  .day-picker{position:sticky;top:64px;z-index:900;display:flex;gap:6px;overflow-x:auto;padding:var(--s2) 0 var(--s3);background:linear-gradient(var(--paper) 82%,rgba(240,242,241,0));scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .day-picker::-webkit-scrollbar{display:none}
+  @media(max-width:640px){.day-picker{top:52px}}
+  .dp{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:54px;padding:7px 10px 6px;border:1px solid var(--rule2);border-bottom-width:3px;border-radius:var(--r-sm);background:var(--card);cursor:pointer;font-family:'JetBrains Mono',monospace;transition:background .15s,border-color .15s,transform .12s}
+  .dp:active{transform:scale(.96)}
+  .dp .w{font-size:9px;letter-spacing:.12em;color:var(--faint);text-transform:uppercase}
+  .dp .n{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--ink);line-height:1.1}
+  .dp.on{background:var(--ink);border-color:var(--ink)}
+  .dp.on .w{color:rgba(253,251,246,.65)}
+  .dp.on .n{color:var(--on-ink)}
+  .dp.dp-all{justify-content:center;font-family:'EB Garamond',serif;font-size:12.5px;font-weight:600;color:var(--muted);padding:0 14px}
+  .dp.dp-all.on{color:var(--on-ink)}
+  .day-h .dt{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-text);font-weight:600}
+  .day-h .ti{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+  .tl{padding:var(--s3) var(--s6) var(--s3)}
+  .tl-row{display:grid;grid-template-columns:56px 26px 1fr;align-items:start;padding:7px 10px;margin:0 -10px;border-radius:var(--r-sm);transition:background .15s}
+  @media(hover:hover){.tl-row:hover{background:rgba(59,82,101,.06)}}
+  .tl-row .tm{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);padding-top:2px}
+  .tl-row .ln{position:relative;display:flex;justify-content:center}
+  .tl-row .ln::before{content:'';position:absolute;top:17px;bottom:-14px;width:1.5px;background:var(--rule)}
+  .tl-row:last-child .ln::before{display:none}
+  .glnum{width:22px;height:22px;border-radius:50%;background:var(--sand);border:2px solid var(--rule2);box-shadow:0 1px 4px rgba(30,38,43,.16);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:10.5px;color:var(--ink);text-decoration:none;z-index:1;margin-top:1px}
+  .glnum:hover{transform:scale(1.12)}
+  .tl-row .gl{width:11px;height:11px;border-radius:50%;border:2.5px solid var(--azur);background:#fff;margin-top:4px;z-index:1}
+  .tl-row.food .gl{border-color:var(--coral)}
+  .tl-row.beach .gl{border-color:var(--sea)}
+  .tl-row.hike .gl{border-color:var(--palm)}
+  .tl-row.trip .gl{border-color:var(--sun)}
+  .tl-row.bar .gl{border-color:var(--lilac)}
+  .tl-row.move .gl{border-color:var(--transit);background:var(--transit)}
+  .tl-row .tx{font-size:16px;color:var(--ink);padding-left:6px;line-height:1.5}
+  .tl-row .tx b{font-weight:600}
+  .tl-row .tx a{color:inherit;text-decoration:none;border-bottom:1.5px dotted rgba(18,115,184,.55);transition:color .12s}
+  .tl-row .tx a:hover{color:var(--azur)}
+  .tl-row .tx a:visited{color:var(--lilac-text);border-bottom-color:rgba(141,124,153,.55)}
+  .tl-row .dur{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint);margin-left:8px;white-space:nowrap}
+  .opt{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--gold-text);border:1px solid rgba(176,138,79,.5);border-radius:var(--r-xs);padding:0 5px;white-space:nowrap}
+  .eur{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold-text);border:1px solid rgba(176,138,79,.45);border-radius:var(--r-xs);padding:0 4px;margin-left:6px;white-space:nowrap;font-style:normal}
+  .lock{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--palm);border:1px solid rgba(113,128,91,.5);border-radius:var(--r-xs);padding:0 5px;white-space:nowrap}
+  .tl-row .opt,.tl-row .lock{margin-left:8px}
+  .day-f{display:flex;gap:var(--s3);align-items:baseline;padding:var(--s4) var(--s6);border-top:1px solid var(--rule);background:rgba(59,82,101,.06);font-size:14px;color:var(--muted)}
+  .day-f .lb{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--azur);flex:0 0 auto;padding-top:1px;font-weight:600}
+  .day-f b{color:var(--ink)}
+  @media(max-width:520px){.tl{padding:10px 14px}.day-h{padding:14px 16px}.day-h .ti{font-size:20px}.tl-row{grid-template-columns:46px 26px 1fr}}
+
+  /* ===== activities ===== */
+  #acts{margin-top:var(--s4)}
+  .arows{display:grid;gap:8px;padding:0}
+  .arows{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;align-items:start}
+  .arow{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;border:1px solid var(--rule);border-radius:var(--r-sm);background:var(--card);text-decoration:none;color:var(--ink);transition:border-color .14s,background .14s}
+  @media(hover:hover){.arow:hover{border-color:var(--azur);background:rgba(59,82,101,.05)}}
+  .arow:active{transform:scale(.995)}
+  .arow .nm{flex:1;min-width:0;font-weight:600;font-size:15.5px;line-height:1.3}
+  .arow .st{color:var(--gold-text)}
+  .arow .ad{display:block;font-weight:400;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+  .arow .atip{display:block;font-weight:400;font-style:italic;font-size:12px;color:var(--faint);line-height:1.45;margin-top:4px}
+  .arow .pr{flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--gold-text);white-space:nowrap;padding-top:2px}
+  .arow .go{flex:0 0 auto;width:14px;height:14px;color:var(--faint);margin-top:3px}
+  .extra-num{flex:0 0 auto;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--sand);border:2px solid var(--rule2);box-shadow:0 1px 4px rgba(30,38,43,.16);font-family:'JetBrains Mono',monospace;font-weight:600;font-size:10px;color:var(--ink);margin-top:1px}
+  @media(hover:hover){.arow:hover .go{color:var(--azur)}}
+  @media(max-width:640px){
+    .arows{gap:8px;align-items:stretch}
+    .arow{position:relative;display:grid;grid-template-columns:20px minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:3px 7px;padding:10px 23px 9px 9px;align-items:start;min-height:104px;height:100%}
+    .arow .nm{font-size:13.5px;line-height:1.2;display:block}
+    .arow .ad{font-size:11.5px;line-height:1.3;margin-top:3px}
+    .arow .atip{display:none}
+    .arow .pr{grid-column:2;font-size:9.5px;white-space:normal;text-align:left;padding-top:0}
+    .arow .go{position:absolute;right:8px;top:10px;width:13px;height:13px}
+    .extra-num{width:20px;height:20px;font-size:9.5px}
+  }
+
+  /* ===== tips / misc ===== */
+  .quick-memo{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;width:fit-content;max-width:100%;margin:0 0 var(--s4);padding:var(--s3) var(--s4);border:1px solid var(--rule);border-radius:var(--r-md);background:rgba(251,250,246,.68)}
+  .quick-memo .qm-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-text);flex:0 0 auto}
+  .qm-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .quick-memo .qm{display:inline-flex;align-items:center;min-height:32px;padding:6px 13px;border-radius:var(--r-pill);border:1px solid var(--rule2);background:var(--card);font-size:13.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+  .tips{column-count:2;column-gap:var(--s4)}
+  @media(max-width:720px){.tips{column-count:1}}
+  .tip{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md);padding:var(--s4);box-shadow:var(--shadow);break-inside:avoid;margin-bottom:var(--s4)}
+  .tip h3{font-size:17px;font-weight:700;margin-bottom:6px;line-height:1.3}
+  .tip p{font-size:15px;color:var(--muted);line-height:1.55}
+  .tip p b{color:var(--ink);font-weight:700}
+  .tip.tip-pack p{font-size:14.5px}
+  .tip.tip-pack p b{display:block;margin-top:10px;color:var(--coral-text);font-size:10.5px;font-weight:600;font-family:'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+  .tip.tip-pack p b:first-child{margin-top:0}
+  .quick-memo a.qm{text-decoration:none;cursor:pointer;color:var(--ink);transition:border-color .15s,color .15s,transform .12s}
+  .quick-memo a.qm .qm-dl{width:13px;height:13px;margin-right:5px;color:var(--azur);flex:0 0 auto}
+  @media(hover:hover){.quick-memo a.qm:hover{border-color:var(--azur);color:var(--azur)}}
+  .quick-memo a.qm:active{transform:scale(.97)}
+  .wc-live{display:inline-flex;align-items:center;gap:5px;vertical-align:middle;margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--coral-text)}
+  .wc-dot{width:7px;height:7px;border-radius:50%;background:var(--coral-text);animation:wc-pulse 2s ease-in-out infinite}
+  @keyframes wc-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.65)}}
+  @media(prefers-reduced-motion:reduce){.wc-dot{animation:none}}
+  .wc{display:flex;flex-direction:column;margin:8px 0 10px}
+  .wc-row{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:6px 12px;padding:8px 0;border-top:1px solid var(--rule)}
+  .wc-row:first-child{border-top:0}
+  .wc-when{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap}
+  .wc-teams{font-size:14.5px;font-weight:600;color:var(--ink);min-width:0}
+  .wc-teams.tbd{font-weight:400;font-style:italic;color:var(--faint)}
+  .wc-note{margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:400;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+  .wc-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--faint);white-space:nowrap;text-transform:uppercase;letter-spacing:.04em;text-align:right}
+  .wc-tag.live{color:#b83227;font-weight:700}
+  @media(max-width:400px){.wc-row{grid-template-columns:auto 1fr}.wc-tag{grid-column:2;text-align:left}}
+  .callout{border:1px solid rgba(176,138,79,.5);background:rgba(176,138,79,.08);border-radius:var(--r-md);padding:var(--s4) var(--s5);font-size:15px;color:var(--ink);margin:var(--s4) 0}
+  .callout b{font-weight:700}
+  .callout.blue{border-color:rgba(18,115,184,.4);background:rgba(59,82,101,.08)}
+  .band{background:rgba(244,236,220,.42);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .site-end{position:relative;margin-top:var(--s8);padding:var(--s6) 0 var(--s7)}
+  .site-end::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--azur) 0%,var(--sea) 32%,var(--sun) 66%,var(--coral) 100%);opacity:.9}
+  .site-end .wrap{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);text-align:center}
+
+  footer{padding:44px 0 72px;border-top:1px solid var(--rule);margin-top:56px}
+  footer .src{font-size:12px;color:var(--faint);line-height:1.9}
+  footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule2)}
+  footer a:hover{color:var(--azur)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Päänavigaatio">
+  <div class="nav-in">
+    <a class="brand" href="#yleiskuva" data-tab="yleiskuva">Lofootit <em>’26</em></a>
+    <div class="tabs" role="tablist">
+      <a class="tab on" role="tab" aria-selected="true" id="tab-yleiskuva" aria-controls="p-yleiskuva" href="#yleiskuva" data-tab="yleiskuva"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.8 12 3.5l9 7.3"/><path d="M5.2 9.5V20.5h13.6V9.5"/></svg>Yleiskuva</a>
+      <a class="tab" role="tab" aria-selected="false" id="tab-paivat" aria-controls="p-paivat" href="#paivat" data-tab="paivat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.8h17M8 3v3.6M16 3v3.6"/></svg>Päivät</a>
+      <a class="tab" role="tab" aria-selected="false" id="tab-kartta" aria-controls="p-kartta" href="#kartta" data-tab="kartta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2s-6.8-5.6-6.8-11a6.8 6.8 0 1 1 13.6 0c0 5.4-6.8 11-6.8 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Kartta</a>
+      <a class="tab" role="tab" aria-selected="false" id="tab-aktiviteetit" aria-controls="p-aktiviteetit" href="#aktiviteetit" data-tab="aktiviteetit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.6l2.5 5.1 5.6.8-4 4 .9 5.6-5-2.7-5 2.7.9-5.6-4-4 5.6-.8z"/></svg>Ekstrat</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ YLEISKUVA ============ -->
+<div class="panel on" id="p-yleiskuva" role="tabpanel" aria-labelledby="tab-yleiskuva">
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+      <div class="hero-copy">
+      <div class="kicker">Roadtrip · Lofootit · 18.–25.7.2026</div>
+      <h1>Lofootit 2026<br/><em>keskiyön auringon alle</em></h1>
+      <div class="hero-cta">
+        <a class="gbtn" href="#paivat" data-tab="paivat">Katso päiväohjelma →</a>
+        <a class="gbtn ghost" href="#kartta" data-tab="kartta">Avaa kartta</a>
+      </div>
+      </div>
+      <figure class="hero-art" aria-hidden="true">
+        <svg viewBox="0 -34 520 334" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="gSea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#4E7189" stop-opacity=".30"/>
+              <stop offset="1" stop-color="#4E7189" stop-opacity=".08"/>
+            </linearGradient>
+            <radialGradient id="gSun" cx=".5" cy=".42" r=".62">
+              <stop offset="0" stop-color="#E8C783"/>
+              <stop offset=".62" stop-color="#C9A05C"/>
+              <stop offset="1" stop-color="#B08A4F"/>
+            </radialGradient>
+            <linearGradient id="gLand" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#E2E7E4" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#E2E7E4" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M-6 178 C 60 154, 118 170, 168 152 C 214 136, 240 150, 284 142 C 330 134, 356 120, 396 113 C 436 106, 472 98, 526 88 L 526 -6 L -6 -6 Z" fill="url(#gLand)"/>
+          <circle cx="400" cy="4" r="40" fill="var(--sun)" opacity=".14"/>
+          <circle cx="400" cy="4" r="29" fill="url(#gSun)"/>
+          <circle cx="400" cy="4" r="37" fill="none" stroke="var(--sun)" stroke-width="1.4" opacity=".4"/>
+          <path d="M-6 178 C 60 154, 118 170, 168 152 C 214 136, 240 150, 284 142 C 330 134, 356 120, 396 113 C 436 106, 472 98, 526 88 L 526 300 L -6 300 Z" fill="url(#gSea)"/>
+          <path d="M-6 210 Q 60 204 126 210 T 258 210 T 390 210 T 526 208" fill="none" stroke="var(--azur)" stroke-width="1.4" opacity=".22"/>
+          <path d="M-6 244 Q 60 238 126 244 T 258 244 T 390 244 T 526 242" fill="none" stroke="var(--azur)" stroke-width="1.4" opacity=".18"/>
+          <g stroke="var(--sun)" stroke-linecap="round">
+            <path d="M387 207 H 413" stroke-width="3.5" opacity=".5"/>
+            <path d="M391 218 H 409" stroke-width="3" opacity=".38"/>
+            <path d="M388 230 H 412" stroke-width="3" opacity=".28"/>
+            <path d="M394 243 H 406" stroke-width="2.5" opacity=".2"/>
+          </g>
+          <g transform="translate(148,206)"><path d="M0 0 L8 -19 L10.5 0 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1"/><path d="M-3.5 1 H14 L10.5 5.5 H0 Z" fill="var(--ink)" opacity=".85"/></g>
+          <g transform="translate(322,226) scale(.78)"><path d="M0 0 L8 -19 L10.5 0 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2"/><path d="M-3.5 1 H14 L10.5 5.5 H0 Z" fill="var(--ink)" opacity=".85"/></g>
+          <g stroke="var(--ink)" stroke-width="1.4" fill="var(--sand)" stroke-linejoin="round" opacity=".8">
+            <path d="M96 150 l16 -30 9 14 10 -20 14 36 Z"/>
+            <path d="M196 134 l13 -24 8 11 9 -16 12 29 Z"/>
+            <path d="M252 120 l13 -24 8 11 9 -16 12 29 Z"/>
+            <path d="M404 100 l12 -22 7 10 9 -15 11 27 Z"/>
+          </g>
+          <path class="draw coast" pathLength="1" d="M-6 178 C 60 154, 118 170, 168 152 C 214 136, 240 150, 284 142 C 330 134, 356 120, 396 113 C 436 106, 472 98, 526 88" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M514 -20 C 502 18, 488 58, 472 92" fill="none" stroke="var(--azur)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+          <path class="dash" d="M54 164 C 120 150, 200 143, 258 143 C 330 133, 410 114, 466 99" fill="none" stroke="var(--azur)" stroke-width="1.6" opacity=".75"/>
+          <path class="dash" d="M48 172 C 36 200, 26 226, 18 250" fill="none" stroke="var(--coral)" stroke-width="1.6" opacity=".8"/>
+          <g stroke="var(--ink)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".7">
+            <path d="M120 6 q4 -5 8 0 q4 -5 8 0"/>
+            <path d="M154 20 q3.4 -4.2 6.8 0 q3.4 -4.2 6.8 0"/>
+            <path d="M226 -8 q3 -4 6 0 q3 -4 6 0"/>
+          </g>
+          <g transform="translate(318,128)">
+            <path d="M-8 0 V-7 L0 -13 L8 -7 V0 Z" fill="var(--coral)" stroke="var(--ink)" stroke-width="1.1"/>
+            <rect x="-1.8" y="-5.5" width="3.6" height="5.5" fill="var(--paper)"/>
+            <path d="M-8 0 h16 M-5 0 v4 M5 0 v4" stroke="var(--ink)" stroke-width="1.1" fill="none"/>
+          </g>
+          <g font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing="1.2" fill="var(--muted)">
+            <circle cx="52" cy="166" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="44" y="188">Å</text>
+            <g class="pulse"><circle cx="110" cy="162" r="8" fill="var(--paper)" stroke="var(--coral)" stroke-width="2.6"/></g>
+            <circle cx="110" cy="162" r="2.7" fill="var(--ink)"/>
+            <text x="86" y="188" font-size="10" font-weight="600" fill="var(--ink)">REINE</text>
+            <circle cx="196" cy="147" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="166" y="168">NUSFJORD</text>
+            <circle cx="260" cy="143" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="242" y="164">LEKNES</text>
+            <circle cx="352" cy="122" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="300" y="110">HENNINGSVÆR</text>
+            <circle cx="470" cy="99" r="4.5" fill="var(--coral)" stroke="var(--paper)" stroke-width="1.6"/>
+            <text x="436" y="121">SVOLVÆR</text>
+            <text x="8" y="264" font-size="8" fill="var(--coral-text)">LAUTTA → BODØ</text>
+            <text x="425" y="50" font-size="8" fill="var(--faint)">E10 · NARVIK</text>
+          </g>
+          <text x="8" y="292" font-family="'JetBrains Mono',monospace" font-size="8.5" letter-spacing="1.5" fill="var(--faint)">LOFOOTIT · 67.93°N 13.09°E</text>
+        </svg>
+      </figure>
+      <nav class="hero-toc" aria-label="Sivun sisältö">
+        <a href="#saapumiset"><span class="tn">01</span>Reitti &amp; etapit</a>
+        <a href="#kamppa"><span class="tn">02</span>Majoitus &amp; Sää</a>
+        <a href="#lataus"><span class="tn">03</span>Tesla &amp; lataus</a>
+        <a href="#kaytannot"><span class="tn">04</span>Käytännön asiat</a>
+      </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="saapumiset">
+    <div class="wrap">
+      <div class="sec-head"><span class="n">01</span><h2>Reitti &amp; etapit</h2></div>
+      <p class="sec-sub">Koko lenkki on noin <b>3 300 km</b>. Norja ja Ruotsi ovat tunnin Suomea jäljessä — kellonajat ovat paikallista aikaa.</p>
+      <div class="grid g2 flights">
+        <div class="card fcard">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l1.4-4.2A2 2 0 0 1 8.3 5.5h7.4a2 2 0 0 1 1.9 1.3L19 11M5 11h14a2 2 0 0 1 2 2v3.5h-2.6M5 11a2 2 0 0 0-2 2v3.5h2.6m0 0a1.9 1.9 0 1 0 3.8 0m-3.8 0h3.8m6.8 0a1.9 1.9 0 1 0 3.8 0m-3.8 0h3.8m-10.6 0h6.8"/></svg>Menomatka <span class="fsub">la 18. – ma 20.7</span></h3>
+          <div class="frow"><div class="fwho">La 18.7 · Espoo → Oulu <span class="fsub">Vt4</span></div><div class="fdet mono">ESPOO 10:00 → OULU ~17:30 · 610 km</div><div class="fnote">Latauslounas Jyväskylässä · Airbnb-check-in klo 16 jälkeen</div></div>
+          <div class="frow"><div class="fwho">Su 19.7 · Oulu → Bjerkvik <span class="fsub">E10</span></div><div class="fdet mono">OULU 09:00 → BJERKVIK ~17:00 · ~620 km</div><div class="fnote">Haparanda → Gällivare → Kiruna → raja. Kello siirtyy −1 h</div></div>
+          <div class="frow"><div class="fwho">Ma 20.7 · Bjerkvik → Lofootit <span class="fsub">E10</span></div><div class="fdet mono">BJERKVIK 09:30 → SVOLVÆR ~13:30 · 290 km</div><div class="fnote">Supercharger-lataus lähdössä — Lofooteilla hubit ovat Svolvær &amp; Leknes</div></div>
+        </div>
+        <div class="card fcard">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5h18M5.5 17.5l-1.2-4.2 8-1.8 6.9 2.4M7 12.7V8.5h4.5l1.6 3.1M9 8.5V6h3M4.5 21c1.4 1 2.9 1 4.3 0 1.4 1 2.9 1 4.3 0 1.5 1 3 1 4.4 0 1 .7 2 .9 3 .5"/></svg>Paluumatka <span class="fsub">to 23. – la 25.7</span></h3>
+          <div class="frow"><div class="fwho">To 23.7 · Lautta + Bodø → Luleå <span class="fsub">Rv95 Silvervägen</span></div><div class="fdet mono">MOSKENES ⛴ 09:15 → BODØ 12:45 · ajo 505 km</div><div class="fnote">Kaistalle viim. 08:30 · perillä Luleåssa ~20:30</div></div>
+          <div class="frow"><div class="fwho">Pe 24.7 · Luleå → Viitasaari <span class="fsub">E4 + Vt4</span></div><div class="fdet mono">LULEÅ 10:00 → VIITASAARI ~17:30 · ~465 km</div><div class="fnote">Gammelstad aamulla · kello +1 h Suomessa · check-in 15–18!</div></div>
+          <div class="frow"><div class="fwho">La 25.7 · Viitasaari → Espoo <span class="fsub">Vt4</span></div><div class="fdet mono">VIITASAARI 10:00 → ESPOO ~14:30 · 360 km</div><div class="fnote">Kotona iltapäivällä 🎉</div></div>
+        </div>
+      </div>
+      <div class="callout blue" style="margin-top:18px">
+        ⛴ <b>Lautta Moskenes → Bodø on varattu</b> (to 23.7 klo 09:15, saapuminen 12:45). Lippu on voimassa, kun auto on <b>varattujen kaistalla viimeistään 45 min ennen lähtöä</b> — eli satamassa klo 08:30. Moskenes Camping on sataman vieressä, joten aamu on helppo. Lautalla ei ladata: lähde Lofooteilta riittävällä akulla ja lataa Bodøssa heti maissa.
+      </div>
+    </div>
+  </section>
+
+  <section id="kamppa" class="band">
+    <div class="wrap">
+      <details class="sec-acc">
+        <summary><div class="sec-head"><span class="n">02</span><h2>Majoitus &amp; Sää</h2></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="sec-body">
+      <div class="grid g2">
+        <div class="card">
+          <h3>Majoitukset — 7 yötä</h3>
+          <dl class="kv">
+            <dt>La 18.7</dt><dd><b>Airbnb · Oulu</b> · itsecheck-in klo 16 jälkeen (lukkolaatikko) · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Rautatienkatu%2080%20Oulu" target="_blank" rel="noopener">kartta</a></dd>
+            <dt>Su 19.7</dt><dd><b>Airbnb · Vassdalen, Bjerkvik</b> · check-in klo 17 jälkeen · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Vassdalsveien%20595%20Bjerkvik" target="_blank" rel="noopener">kartta</a></dd>
+            <dt>Ma 20.7</dt><dd><b>Skårungen · Kabelvåg</b> · Motorhomes ZONE A · check-in 15, out 11 · sauna &amp; palju · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Sk%C3%A5rungen%20Lofoten" target="_blank" rel="noopener">kartta</a></dd>
+            <dt>Ti 21.7</dt><dd><b>Lofoten Beach Camp · Flakstad</b> · drop-in, ei varausta — <b>paikalle ennen klo 18</b> · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Lofoten%20Beach%20Camp" target="_blank" rel="noopener">kartta</a></dd>
+            <dt>Ke 22.7</dt><dd><b>Moskenes Camping · Sørvågen</b> · paikka 46 C, <b>ilman sähköä</b> · check-in/out 12:00 · portin koodi sähköpostiin 2 pv ennen · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Moskenes%20Camping" target="_blank" rel="noopener">kartta</a></dd>
+            <dt>To 23.7</dt><dd><b>Best Western Plus Savoy · Luleå</b> · check-in 15 → out 12 · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Savoy%20Lule%C3%A5" target="_blank" rel="noopener">kartta</a></dd>
+            <dt>Pe 24.7</dt><dd><b>Wiikki Majatalo · Viitasaari</b> · <b>check-in 15–18</b>, out 8–11 · <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Wiikki%20Majatalo%20Viitasaari" target="_blank" rel="noopener">kartta</a></dd>
+          </dl>
+          <div class="btnrow">
+            <span class="pill palm">Lofoottien yöt autossa · Camp Mode</span>
+            <span class="pill gold">peitot · tyynyt · lakanat mukaan</span>
+          </div>
+        </div>
+        <div class="card weather-card">
+          <h3>Sää Lofooteilla</h3>
+          <dl class="weather-list">
+            <div class="weather-row">
+              <dt>Merivesi</dt>
+              <dd><span class="weather-main" id="seatemp">~12 °C</span> <span class="weather-note">juuri nyt, Vestfjorden</span></dd>
+            </div>
+            <div class="weather-row">
+              <dt>Lämpötila</dt>
+              <dd><span class="weather-main" id="airtemp">Päivä ~13-17 °C · yö ~9-12 °C</span> <span class="weather-note">Lofoottien päivät</span></dd>
+            </div>
+            <div class="weather-row">
+              <dt>Huipuilla</dt>
+              <dd><span class="weather-main" id="mountaintemp">~6-13 °C</span> <span class="weather-note">ke, ~450 m</span> · Reinebringenillä tuulee — kerrospukeutuminen</dd>
+            </div>
+            <div class="weather-row">
+              <dt>Sää vaihtuu</dt>
+              <dd>15–30 minuutin välein: aurinkoa, sadetta ja tuulta samana päivänä. Sadekuori aina mukaan</dd>
+            </div>
+            <div class="weather-row">
+              <dt>Keskiyön aurinko</dt>
+              <dd>Aurinko ei laske koko reissun aikana — unimaskit mukaan ja illat rohkeasti käyttöön</dd>
+            </div>
+          </dl>
+          <div class="btnrow">
+            <a class="gbtn" href="https://www.yr.no/en/forecast/daily-table/2-3137942/Norway/Nordland/V%C3%A5gan/Svolv%C3%A6r" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 2.2V3.6M8 12.4v1.4M2.2 8H3.6M12.4 8h1.4M4 4l1 1M12 12l1 1M12 4l-1 1M4 12l1-1"/><path d="M17.5 21a3.5 3.5 0 0 0 .3-6.98A5 5 0 0 0 8.9 15.4 4 4 0 0 0 9 21z"/></svg> Yr.no · Svolvær</a>
+          </div>
+        </div>
+      </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="lataus">
+    <div class="wrap">
+      <details class="sec-acc">
+        <summary><div class="sec-head"><span class="n">03</span><h2>Tesla &amp; lataus</h2></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="sec-body">
+      <div class="grid g2">
+        <div class="card">
+          <h3>⚡ Latausstrategia</h3>
+          <dl class="kv">
+            <dt>Suomi</dt><dd>Vt4:n varsi on tiheää Supercharger-verkkoa — latauslounaat <b>Jyväskylässä</b> (meno &amp; paluu)</dd>
+            <dt>Ruotsi · E10</dt><dd>Pohjoisessa harvempaa: lataa <b>Gällivaressa tai Kirunassa</b>, pidä reserviä tunturiosuudelle</dd>
+            <dt>Lofootit</dt><dd>Pikalataushubit ovat <b>Svolvær ja Leknes</b>. Kärjessä (Reine/Å) ei pikalatureita — sinne <b>~60 km reservillä</b></dd>
+            <dt>Leirintäyöt</dt><dd>Skårungen &amp; Beach Camp: yölataus leiripistokkeesta (<b>CEE 16A -adapteri</b> mukaan). <b>Moskenes: paikka ilman sähköä</b> → lataa Leknesissä keskiviikkona</dd>
+            <dt>Camp Mode</dt><dd>Yöt autossa: lämmitys kuluttaa <b>~10–15 %/yö</b> — laske se akkubudjettiin</dd>
+            <dt>Paluu</dt><dd><b>Bodø</b> heti lautan jälkeen täyteen → Silvervägenillä lataus <b>Arjeplog/Arvidsjaur</b> → Luleå</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>🧾 Tollit, lautta &amp; auto</h3>
+          <dl class="kv">
+            <dt>AutoPASS</dt><dd><b>Rekisteröi rekisterikilpi Epass24:ään ennen lähtöä</b> — Norjan tollit ja lautat laskutetaan automaattisesti ilman lisämaksuja</dd>
+            <dt>Lautta ✓</dt><dd>Moskenes → Bodø to 23.7 klo 09:15 on varattu. <b>Kaistalle viimeistään 08:30</b> (45 min ennen)</dd>
+            <dt>Pakolliset</dt><dd><b>Heijastinliivit kaikille + varoituskolmio</b> — lakisääteiset Norjassa ja Ruotsissa</dd>
+            <dt>Rengas</dt><dd>Teslassa ei ole vararengasta — <b>paikkasarja + 12 V kompressori</b> mukaan</dd>
+            <dt>Dashcam</dt><dd>USB-tikku Sentry/Dashcam-tallennukseen; soraosuuksilla kiveniskemät ovat mahdollisia</dd>
+            <dt>Sovellukset</dt><dd>Tesla · <b>ABRP</b> (reittisuunnittelu) · <b>PlugShare</b> (laturit) · Yr (sää) — linkit alla kohdassa 04</dd>
+          </dl>
+        </div>
+      </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kaytannot" class="band">
+    <div class="wrap">
+      <details class="sec-acc">
+        <summary><div class="sec-head"><span class="n">04</span><h2>Käytännön asiat</h2></div><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="sec-body">
+      <div class="quick-memo" aria-label="Lataa matkasovellukset">
+        <span class="qm-label">Lataa</span>
+        <div class="qm-chips">
+          <a class="qm" href="https://abetterrouteplanner.com" target="_blank" rel="noopener" aria-label="Avaa A Better Routeplanner"><svg class="qm-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>ABRP</a>
+          <a class="qm" href="https://www.plugshare.com" target="_blank" rel="noopener" aria-label="Avaa PlugShare"><svg class="qm-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>PlugShare</a>
+          <a class="qm" href="https://www.yr.no/en" target="_blank" rel="noopener" aria-label="Avaa Yr.no"><svg class="qm-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>Yr · sää</a>
+        </div>
+      </div>
+      <div class="quick-memo" aria-label="Pakkauslistat PDF-muodossa">
+        <span class="qm-label">PDF:t</span>
+        <div class="qm-chips">
+          <a class="qm" href="lofoten-matkustajan-lista.pdf" target="_blank" rel="noopener"><svg class="qm-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>Pakkauslista</a>
+          <a class="qm" href="lofoten-tesla-lista.pdf" target="_blank" rel="noopener"><svg class="qm-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>Tesla-lista</a>
+        </div>
+      </div>
+      <div class="tips" id="tips"></div>
+        </div>
+      </details>
+    </div>
+  </section>
+</div>
+
+<!-- ============ KARTTA ============ -->
+<div class="panel" id="p-kartta" role="tabpanel" aria-labelledby="tab-kartta">
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="n">05</span><h2>Kartta ja kaikki kohteet</h2></div>
+      <div class="gbar" id="daybar">
+        <span class="dblbl">Päivän ohjelma</span>
+        <button class="chip-btn" data-df="d18">LA 18</button>
+        <button class="chip-btn" data-df="d19">SU 19</button>
+        <button class="chip-btn" data-df="d20">MA 20</button>
+        <button class="chip-btn" data-df="d21">TI 21</button>
+        <button class="chip-btn" data-df="d22">KE 22</button>
+        <button class="chip-btn" data-df="d23">TO 23</button>
+        <button class="chip-btn" data-df="d24">PE 24</button>
+        <button class="chip-btn" data-df="d25">LA 25</button>
+      </div>
+      <div class="gbar" id="extrabar">
+        <button class="chip-btn extra-map" data-extra="1" aria-label="Ekstrat kartalla"><span class="extra-title">Ekstrat</span></button>
+      </div>
+      <div id="map" class="map-loading" role="region" aria-label="Kartta reissun kohteista"></div>
+      <p class="map-hint"><span class="mono">67.93°N 13.09°E</span></p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PÄIVÄT ============ -->
+<div class="panel" id="p-paivat" role="tabpanel" aria-labelledby="tab-paivat">
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="n">06</span><h2>Päiväkohtainen runko</h2></div>
+      <div class="day-picker" id="daypick" aria-label="Valitse päivä"></div>
+      <div id="days"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AKTIVITEETIT ============ -->
+<div class="panel" id="p-aktiviteetit" role="tabpanel" aria-labelledby="tab-aktiviteetit">
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="n">07</span><h2>Ekstrat</h2></div>
+      <div id="acts"></div>
+    </div>
+  </section>
+</div>
+
+
+<footer class="site-end" role="contentinfo">
+  <div class="wrap">Lofootit 2026 · 67.93°N 13.09°E · 18.–25.7.2026</div>
+</footer>
+
+<script>
+/* =================================================================
+   PAIKKADATA, haettu ja ristiinvalidoitu 7/2026 (blogit + viralliset
+   Norja-lähteet + Photon/Nominatim-geokoodaus)
+   cat: sight | food | bar | beach | trip | hike | home | transit
+   zone: lofoten | route
+   ================================================================= */
+const PLACES = [
+  /* ---- majoitukset (7 yötä) ---- */
+  {n:'Airbnb Oulu',cat:'home',zone:'route',la:64.99911,lo:25.46715,d:'Yö 1 · saunallinen kaksio Oulun keskustassa. Itsecheck-in lukkolaatikolla klo 16 jälkeen.',tip:'Checkout su klo 12 mennessä — matkaan silti ajoissa.',q:'Rautatienkatu 80 Oulu'},
+  {n:'Airbnb Vassdalen',cat:'home',zone:'route',la:68.55703,lo:17.73949,d:'Yö 2 · pieni asunto Vassdalenin laaksossa Bjerkvikin kupeessa, E10:n varrella.',tip:'Check-in klo 17 jälkeen · checkout ma klo 14 mennessä.',q:'Vassdalsveien 595 Bjerkvik'},
+  {n:'Skårungen',cat:'home',zone:'lofoten',lbl:1,la:68.2064,lo:14.4261,d:'Yö 3 · varattu ✓ Motorhomes ZONE A. Merinäkymät, sauna & palju, ravintola — Kabelvågin kupeessa.',tip:'Check-in 15 → checkout 11. Kytke auto yöksi leiripistokkeeseen (CEE 16A).',q:'Skårungen Lofoten'},
+  {n:'Lofoten Beach Camp',cat:'home',zone:'lofoten',la:68.10378,lo:13.29315,d:'Yö 4 · drop-in-leirintä suoraan Skagsandenin rannalla: sauna, surffivuokraus ja beach-kahvila.',tip:'Ei varausta — paikalle viimeistään klo 18. Sähköpaikka jos vapaana → yölataus.',q:'Lofoten Beach Camp'},
+  {n:'Moskenes Camping',cat:'home',zone:'lofoten',lbl:1,la:67.9007,lo:13.0527,d:'Yö 5 · varattu ✓ paikka 46 C (ilman sähköä) — lauttasataman vieressä, helppo aamulähtö.',tip:'Check-in/out klo 12. Portin ja saniteettitilan koodi tulee sähköpostiin 2 pv ennen. Wifi-salasana: moskenes.',q:'Moskenes Camping'},
+  {n:'Best Western Savoy Luleå',cat:'home',zone:'route',la:65.58495,lo:22.15795,d:'Yö 6 · hotelliyö Luleån kävelykadulla — kunnon suihkut ja aamiainen lauttapäivän päätteeksi.',tip:'Check-in klo 15 → checkout 12.',q:'Best Western Plus Savoy Luleå'},
+  {n:'Wiikki Majatalo',cat:'home',zone:'route',la:63.18192,lo:25.72323,d:'Yö 7 · perinteinen majatalo Viitasaaressa Vt4:n varrella.',tip:'Check-in vain klo 15–18 — älä myöhästy. Checkout 8–11.',q:'Wiikki Majatalo Viitasaari'},
+
+  /* ---- liikenne & lataus ---- */
+  {n:'Bjerkvik Supercharger',cat:'transit',zone:'route',la:68.5492,lo:17.5571,d:'Viimeinen iso pikalataus ennen Lofootteja — 10 min majapaikasta.',q:'Tesla Supercharger Bjerkvik'},
+  {n:'Svolvær',cat:'transit',zone:'lofoten',la:68.2322,lo:14.5646,d:'Lofoottien "pääkaupunki": suurin latauskeskittymä, isot ruokakaupat ja Trollfjord-risteilyjen lähtösatama.',tip:'Täydennä ruokavarasto täällä — lännempänä kaupat harvenevat.',q:'Svolvær'},
+  {n:'Leknes',cat:'transit',zone:'lofoten',la:68.1475,lo:13.6115,d:'Saariston keskuskylä: pikalaturit ja viimeiset isot kaupat ennen lounaiskärkeä.',tip:'Lataa täyteen keskiviikkona — Moskenesin leiripaikka on ilman sähköä.',q:'Leknes Lofoten'},
+  {n:'Moskenes ferjekai',cat:'transit',zone:'lofoten',la:67.8999,lo:13.0440,d:'Lauttasatama Bodøhön. Varattujen kaistalle viimeistään 45 min ennen lähtöä.',q:'Moskenes ferjekai'},
+  {n:'Bodø',cat:'transit',zone:'route',la:67.28835,lo:14.39415,d:'Lautan pääte mantereella — lataus ja lounas heti maissa ennen Silvervägeniä.',q:'Bodø ferjekai'},
+
+  /* ---- Lofootit: nähtävyydet ---- */
+  {n:'Austnesfjorden',cat:'sight',zone:'lofoten',la:68.3159,lo:14.7160,d:'Nasjonal turistveg -levähdyspaikka vuonon rannalla — Lofoottien seinämä avautuu tästä ensimmäistä kertaa.',pr:'ilmainen',q:'Austnesfjorden rasteplass'},
+  {n:'Henningsvær',cat:'sight',zone:'lofoten',la:68.1548,lo:14.2031,star:1,d:'"Lofoottien Venetsia" — kalastajakylä saarten päällä, galleriat, kahvilat ja maailmankuulu jalkapallostadion.',pr:'ilmainen',tip:'Kävele stadionille aallonmurtajalle — saariston kuuluisin kuvapaikka.',q:'Henningsvær'},
+  {n:'KaviarFactory',cat:'sight',zone:'lofoten',la:68.1553,lo:14.2013,d:'Nykytaidegalleria vanhassa kaviaaritehtaassa — Ai Weiwei, Abramović ja pohjoismaista kärkeä.',pr:'120 NOK',tip:'Kesällä ~11-18, mutta aukiolotieto on ristiriitainen — varmista IG/FB ennen käyntiä.',q:'KaviarFactory Henningsvær'},
+  {n:'Lofotr Viikinkimuseo',cat:'sight',zone:'lofoten',la:68.2442,lo:13.7576,star:1,d:'Maailman pisin rekonstruoitu viikinkipäällikön pitkätalo (83 m) Borgissa — elävä museo pukuineen ja pajoineen.',pr:'265 NOK',tip:'Auki joka päivä 10-19. Kokeile jousiammuntaa ja viikinkilaivan soutua.',q:'Lofotr Viking Museum'},
+  {n:'Torvdalshalsen',cat:'sight',zone:'lofoten',la:68.2630,lo:13.8267,d:'Ajettava turistveg-näköalapysäkki — koko Vestvågøy ja rannikko yhdellä silmäyksellä.',pr:'ilmainen',q:'Torvdalshalsen rasteplass'},
+  {n:'Eggum «Hode»',cat:'sight',zone:'lofoten',la:68.3081,lo:13.6847,d:'Markus Raetzin veistos, joka vaihtaa muotoa kiertäessä + karu ulkomeren rantatie ja WWII-rauniot.',pr:'P-maksu',q:'Eggum Lofoten'},
+  {n:'Nusfjord',cat:'sight',zone:'lofoten',la:68.0354,lo:13.3477,star:1,d:'Norjan parhaiten säilynyt kalastajakylä — elävä ulkomuseo rorbuineen ja kuivakalatelineineen.',pr:'100 NOK',tip:'Portti aukeaa aamusta — aamukäynnillä kylä on lähes tyhjä.',q:'Nusfjord'},
+  {n:'Hamnøyn kuvasilta',cat:'sight',zone:'lofoten',la:67.94753,lo:13.13152,star:1,d:'Lofoottien kuvatuin näkymä: punaiset rorbut ja Festhælenin seinämä E10-sillalta.',pr:'ilmainen',tip:'Kuvaa sillan jalkakäytävältä — auto levikkeelle, ei sillalle.',q:'Eliassen Rorbuer Hamnøy'},
+  {n:'Sakrisøy',cat:'sight',zone:'lofoten',la:67.94152,lo:13.11174,d:'Keltaiset 1800-luvun mökit turkoosin salmen ja jyrkkien huippujen välissä.',pr:'ilmainen',q:'Sakrisøy'},
+  {n:'Reine',cat:'sight',zone:'lofoten',la:67.9325,lo:13.0888,star:1,d:'"Norjan kaunein kylä" Reinefjordenin suulla — postikorttien vakiokuva.',pr:'ilmainen',tip:'Pysäköi vain merkityille paikoille — kylä on ahdas ja valvottu.',q:'Reine Lofoten'},
+  {n:'Å i Lofoten',cat:'sight',zone:'lofoten',la:67.8796,lo:12.9840,d:'E10:n päätepiste: kalastajakylämuseo, kuivakalamuseo ja tien pää -kyltti.',pr:'museo 155 NOK',tip:'Fiskeværsmuseum auki 10-18; Tørrfiskmuseumin aukiolo vaihtelee.',q:'Å i Lofoten'},
+  {n:'Svolværgeita',cat:'sight',zone:'lofoten',la:68.2462,lo:14.5885,d:'Svolværin ikoninen "Vuohi"-kalliopiikki sataman yllä — rohkeimmat kiipeävät sarvien väliin (opastettuna).',pr:'ilmainen katsoa',q:'Svolværgeita'},
+  {n:'Gammelstadin kirkkokaupunki',cat:'sight',zone:'route',la:65.64490,lo:22.02828,star:1,d:'UNESCO-kohde Luleåssa: yli 400 punaista kirkkotupaa 1400-luvun kivikirkon ympärillä.',pr:'ilmainen',tip:'Aamukierros ennen ajopäivää — 10 min hotellilta.',q:'Gammelstad Church Town'},
+  {n:'Oulun kauppatori',cat:'sight',zone:'route',la:65.01329,lo:25.46471,d:'Toripolliisi-patsas, kauppahalli ja punaiset makasiinit meren äärellä.',pr:'ilmainen',q:'Toripolliisi Oulu'},
+
+  /* ---- Lofootit: rannat ---- */
+  {n:'Hauklandstranda',cat:'beach',zone:'lofoten',la:68.1980,lo:13.5292,star:1,d:'Norjan parhaaksi äänestetty ranta: valkoinen hiekka ja turkoosi vesi vuorten sylissä.',pr:'ilmainen',tip:'Kesäkahvila rannalla. Mannen-huipulle noustaan tästä.',q:'Haukland Beach'},
+  {n:'Uttakleiv',cat:'beach',zone:'lofoten',la:68.2137,lo:13.5083,d:'Villimpi naapuriranta — "Lofoottien silmä" -kivimuodostelma ja lampaita rannalla.',pr:'P-maksu',q:'Uttakleiv Beach'},
+  {n:'Skagsanden',cat:'beach',zone:'lofoten',la:68.1066,lo:13.2951,d:'Surffareiden ja valokuvaajien ranta — märkä hiekka peilaa vuoret. Beach Campin kotiranta.',pr:'ilmainen',q:'Skagsanden Beach'},
+  {n:'Kvalvika',cat:'beach',zone:'lofoten',la:68.0769,lo:13.0963,d:'Vain jalan saavutettava villi ranta jyrkänteiden välissä — Ryten-polun varrella.',pr:'ilmainen',tip:'Polku Innersandin parkista ~1 h/suunta.',q:'Kvalvika Beach'},
+  {n:'Unstad',cat:'beach',zone:'lofoten',la:68.26521,lo:13.59126,d:'Arktisen surffin mekka — Unstad Arctic Surfin kahvila, sauna ja lainarit.',pr:'kurssit ~1 000 NOK',q:'Unstad Arctic Surf'},
+  {n:'Nallikari',cat:'beach',zone:'route',la:65.03035,lo:25.41165,d:'Oulun pitkä hiekkaranta Hietasaaressa — keskiyön auringon esimakua.',pr:'ilmainen',q:'Nallikari'},
+
+  /* ---- ruoka & kahvilat ---- */
+  {n:'Børsen Spiseri',cat:'food',zone:'lofoten',la:68.2345,lo:14.5794,star:1,d:'Illallinen vuoden 1828 laituriaitassa Svinøyalla — kuivakalaa ja arktista menua, Lofoottien klassikko.',pr:'€€€',tip:'Auki ma 18-22 — varaa pöytä etukäteen netistä.',q:'Børsen Spiseri Svolvær'},
+  {n:'Maren Anna',cat:'food',zone:'lofoten',la:67.8897,lo:13.0237,star:1,d:'Sørvågenin rantaravintola — kalakeitto ja ilta-aurinko laiturilla, etelän paras pöytä.',pr:'€€-€€€',tip:'Varaa pöytä keskiviikolle etukäteen.',q:'Maren Anna Sørvågen'},
+  {n:'Anita\'s Seafood',cat:'food',zone:'lofoten',la:67.9418,lo:13.1119,star:1,d:'Sakrisøyn legendaarinen kalapuoti: fish burger, katkarapuleivät ja kuivakalasnacksit.',pr:'burger ~200 NOK',tip:'Joka päivä ~11-19, ei varauksia — jono etenee nopeasti.',q:'Anitas Sjømat Sakrisøy'},
+  {n:'Henningsvær Lysstøperi & Café',cat:'food',zone:'lofoten',la:68.1545,lo:14.2021,d:'Kynttilävalimo-kahvila — kuuluisat kanelipullat ja hyvä kahvi.',pr:'€',tip:'Kesällä auki päivittäin ~11.30-18.',q:'Henningsvær Lysstøperi'},
+  {n:'Klatrekaféen',cat:'food',zone:'lofoten',la:68.1553,lo:14.2055,d:'Kiipeilijöiden kahvila-ravintola Henningsværissä — burgerit, rento meno ja livemusaa viikonloppuisin.',pr:'€€',q:'Klatrekafeen Henningsvær'},
+  {n:'Bakeriet i Å',cat:'food',zone:'lofoten',la:67.8808,lo:12.9818,d:'1800-luvun kiviuunileipomo tien päässä — kanelipullat suoraan puu-uunista.',pr:'pulla ~50 NOK',tip:'Auki 9-15 ja pullat loppuvat — mene ennen puoltapäivää.',q:'Bakeriet i Å'},
+  {n:'Gammelbua',cat:'food',zone:'lofoten',la:67.93536,lo:13.08845,d:'Reinen historiallinen krouvi (1790) — illallinen vanhassa kauppapaikassa.',pr:'€€€',q:'Gammelbua Reine'},
+  {n:'Sokeri-Jussin Kievari',cat:'food',zone:'route',la:65.01695,lo:25.45928,d:'Perinnekievari Pikisaaren puutalossa — pohjoista lähiruokaa lauantai-iltaan.',pr:'€€',q:'Sokeri-Jussin Kievari Oulu'},
+  {n:'Bistro Norrland',cat:'food',zone:'route',la:65.58503,lo:22.14282,d:'Norrlantilaista lähiruokaa Luleån keskustassa — kävelymatka hotellilta.',pr:'€€',tip:'Auki torstaisin iltaan.',q:'Bistro Norrland Luleå'},
+
+  /* ---- illat & aktiviteetit ---- */
+  {n:'Trevarefabrikken',cat:'bar',zone:'lofoten',la:68.15301,lo:14.19986,d:'Vanha puusepäntehdas Henningsværissä: kahvila, sauna, auringonlaskudrinkit ja livemusiikkia.',pr:'€€',tip:'Keskiyön auringon terassi on kesäiltojen paikka.',q:'Trevarefabrikken Henningsvær'},
+  {n:'Trollfjord-risteily (RIB)',cat:'trip',zone:'lofoten',la:68.23213,lo:14.56471,d:'Merikotkasafari kapeaan Trollfjordiin RIB-veneellä Svolværin torilta (~2 h).',pr:'~1 100 NOK',tip:'Varaa netistä; aja sään mukaan — tyyni päivä on paras.',q:'RIB Lofoten Svolvær'},
+  {n:'Reinefjordenin melonta',cat:'trip',zone:'lofoten',la:67.93521,lo:13.08920,d:'Aamumelonta peilityynellä vuonolla — monen mielestä reissun maagisin tunti.',pr:'~800 NOK',q:'Reine Adventure kayak'},
+
+  /* ---- vaellukset ---- */
+  {n:'Reinebringen',cat:'hike',zone:'lofoten',la:67.9278,lo:13.0714,star:1,d:'Lofoottien ikonisin näkymä: 1 978 sherpa-porrasta Reinen ja vuonojen ylle (448 m).',pr:'ilmainen',tip:'Tarkista polun tilanne (kivivyöryhuollot) FB:stä 1-2 pv ennen. Jyrkkä — kunnon kengät.',q:'Reinebringen trailhead'},
+  {n:'Ryten & Kvalvika -vaellus',cat:'hike',zone:'lofoten',la:68.0893,lo:13.0929,star:1,d:'Monen mielestä saariston paras päivävaellus: Ryten-huippu (543 m) ja kuuluisa kielekekuva Kvalvikan yllä.',pr:'3-5 h',tip:'Lähtö Innersandin maksulliselta parkilta.',q:'Ryten Lofoten'},
+  {n:'Offersøykammen',cat:'hike',zone:'lofoten',la:68.1613,lo:13.5019,d:'Lyhyt E10-varren huippu — täysi 360° Nappstraumenin ja rantojen yli pienellä vaivalla.',pr:'1-2 h',q:'Offersøykammen'},
+  {n:'Mannen',cat:'hike',zone:'lofoten',la:68.2037,lo:13.5202,d:'Hauklandin ja Uttakleivin välinen harjanne — molemmat rannat yhdellä helpolla nousulla.',pr:'1-1,5 h',q:'Mannen Lofoten'},
+  {n:'Festvågtind',cat:'hike',zone:'lofoten',la:68.1781,lo:14.2253,d:'Henningsværin klassikkonäköala (541 m) — kylä ja saaret lintuperspektiivistä.',pr:'~2 h',q:'Festvågtind'},
+  {n:'Fløya & Djevelporten',cat:'hike',zone:'lofoten',la:68.25084,lo:14.59798,d:'Svolværin panoraamahuippu ja kuuluisa rotkoon juuttunut kivi, Pirunportti.',pr:'2-3 h',q:'Djevelporten'}
+];
+
+/* ===== helpers ===== */
+function gq(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);}
+function G(name,label){const p=PLACES.find(x=>x.n===name);const url=p?gq(p.q||p.n):gq(name);return '<a href="'+url+'" target="_blank" rel="noopener">'+(label||name)+'</a>';}
+function GL(q,label){return '<a href="'+gq(q)+'" target="_blank" rel="noopener">'+label+'</a>';}
+
+
+
+/* =================================================================
+   PÄIVÄT
+   ================================================================= */
+const DAYS = [
+ {date:'Lauantai 18.7',c:'var(--azur)',title:'Espoo → Oulu',who:'610 km · Vt4',
+  rows:[
+   {t:'10:00',i:'move',x:'<b>Lähtö Espoosta</b> — Vt4 pohjoiseen',dur:'610 km'},
+   {t:'13:00',i:'food',x:'Latauslounas: Supercharger '+GL('Tesla Supercharger Jyväskylä','Jyväskylässä'),dur:'45 min'},
+   {t:'17:30',i:'move',x:'Perillä Oulussa: check-in '+G('Airbnb Oulu','Airbnb')+' — itsecheck-in lukkolaatikolla (klo 16 jälkeen)'},
+   {t:'18:30',i:'sight',x:'Iltakävely: '+G('Oulun kauppatori','kauppatori & Toripolliisi')+' ja Pikisaaren puutalokortteli',dur:'1 h'},
+   {t:'20:00',i:'food',x:'Illallinen: '+G('Sokeri-Jussin Kievari','Sokeri-Jussin Kievari')+' <i class="eur">€€</i> Pikisaaressa',dur:'1,5 h'},
+   {t:'21:30',i:'beach',x:'Keskiyön auringon esimaku: '+G('Nallikari','Nallikarin ranta'),dur:'1 h',opt:1}
+  ],
+  night:'Huomenna pisin ajopäivä (~620 km). Ruotsissa ja Norjassa kello siirtyy −1 h — puhelin vaihtaa ajan itse, auton kello kannattaa tarkistaa.'},
+
+ {date:'Sunnuntai 19.7',c:'var(--sea)',title:'Oulu → Ruotsin läpi → Bjerkvik',who:'~620 km · E10',
+  rows:[
+   {t:'08:30',i:'move',x:'<b>Lähtö Oulusta</b> (checkout 12 mennessä, mutta matkaan ajoissa) → Tornio/Haparanda',dur:'~1 h 45'},
+   {t:'10:00',i:'move',x:'Raja Ruotsiin — E10 pohjoiseen: Överkalix → Gällivare. <b>Kello −1 h</b>'},
+   {t:'12:30',i:'food',x:'Latauslounas '+GL('Gällivare laddstation','Gällivaressa'),dur:'45 min'},
+   {t:'14:30',i:'move',x:'Ohitse '+GL('Kiruna','Kirunan')+' — kaivoskaupunki, jonka koko keskustaa siirretään parhaillaan',opt:1},
+   {t:'16:00',i:'move',x:'Riksgränsen & Bjørnfjell — tunturiylitys Norjaan, E10:n hienoin mantereen osuus'},
+   {t:'17:00',i:'move',x:'Perillä: '+G('Airbnb Vassdalen','Airbnb Vassdalenissa')+' (check-in klo 17 jälkeen)'},
+   {t:'19:00',i:'food',x:'Illallinen omista eväistä + varhainen ilta — huomenna Lofootit'}
+  ],
+  night:'Bjerkvikin Supercharger on 10 minuutin päässä majapaikasta — lataus hoidetaan aamulla lähtiessä.'},
+
+ {date:'Maanantai 20.7',c:'var(--sun)',title:'Bjerkvik → Vågan — Lofootit alkaa',who:'290 km · E10',
+  rows:[
+   {t:'09:30',i:'move',x:'Lataus '+G('Bjerkvik Supercharger','Bjerkvikin Superchargerilla')+' + E10 länteen',dur:'25 min'},
+   {t:'10:00',i:'move',x:'E10 Lofooteille: Tjeldsundin silta → Fiskebøl',dur:'~3 h'},
+   {t:'13:00',i:'sight',x:G('Austnesfjorden','Austnesfjordenin levähdyspaikka')+' — ensimmäinen postikorttipysähdys',dur:'20 min'},
+   {t:'13:30',i:'food',x:'Lounas + lataus + ruokaostokset: '+G('Svolvær')+' — Lofoottien "pääkaupunki"',dur:'1 h 15'},
+   {t:'15:00',i:'move',x:'Check-in '+G('Skårungen','Skårungen (ZONE A)')+' — varaa samalla sauna- ja paljuvuoro'},
+   {t:'16:00',i:'sight',x:G('Henningsvær')+': kylä, stadion ja '+G('KaviarFactory')+'. Kahvit '+G('Henningsvær Lysstøperi & Café','Lysstøperissä'),dur:'2 h'},
+   {t:'18:15',i:'hike',x:G('Festvågtind')+' — näköalapatikka kylän ylle',dur:'~2 h',opt:1},
+   {t:'20:30',i:'food',x:'Illallinen: '+G('Børsen Spiseri','Børsen Spiseri')+' <i class="eur">€€€</i> Svinøyalla — <b>varaa pöytä</b>',dur:'1,5 h'}
+  ],
+  night:'Sauna & palju Skårungenilla — varaa vuoro respasta heti. Kytke auto yöksi leiripistokkeeseen (CEE 16A -adapteri).'},
+
+ {date:'Tiistai 21.7',c:'var(--palm)',title:'Viikingit, rannat & Beach Camp',who:'~110 km · Vestvågøy → Flakstad',
+  rows:[
+   {t:'08:30',i:'move',x:'Aamiainen + checkout (11 mennessä) → E10 länteen'},
+   {t:'09:30',i:'sight',x:G('Lofotr Viikinkimuseo')+' Borgissa — pitkätalo, laivat ja jousiammunta',dur:'1,5 h'},
+   {t:'11:15',i:'sight',x:G('Torvdalshalsen')+'-näköala',dur:'15 min'},
+   {t:'12:00',i:'sight',x:G('Eggum «Hode»','Eggumin «Hode» ja rantatie'),dur:'1 h',opt:1},
+   {t:'13:15',i:'food',x:'Lataus + lounas + ostokset: '+G('Leknes'),dur:'1 h'},
+   {t:'14:30',i:'beach',x:G('Hauklandstranda','Haukland')+' & '+G('Uttakleiv')+' — pohjolan kaunein rantapari. Välissä '+G('Mannen')+'-harjanne',dur:'2,5 h'},
+   {t:'17:15',i:'hike',x:G('Offersøykammen')+' — lyhyt 360°-huippu',dur:'~2 h',opt:1},
+   {t:'18:00',i:'move',x:'<b>Saapuminen '+G('Lofoten Beach Camp','Lofoten Beach Campille')+'</b> — drop-in: paikalle viimeistään nyt!'},
+   {t:'19:30',i:'food',x:'Illallinen campin beach-kahvilassa + iltakävely '+G('Skagsanden','Skagsandenilla')+' — surffareita ja peilikuvia',dur:'1,5 h'}
+  ],
+  night:'Beach Camp ei ota varauksia — tulkaa ajoissa. Jos täynnä, varapaikka on Ramberg 3 km päässä. Sähköpaikka jos vapaana → yölataus.'},
+
+ {date:'Keskiviikko 22.7',c:'var(--coral)',title:'Å, Reinebringen & Moskenes',who:'~70 km · saariston kärki',
+  rows:[
+   {t:'08:00',i:'move',x:'Lähtö etelään — E10:n hienoin osuus alkaa'},
+   {t:'08:45',i:'sight',x:G('Nusfjord')+' — säilynein kalastajakylä (sisäänpääsy 100 NOK)',dur:'1 h'},
+   {t:'10:15',i:'food',x:'Tien pään pullat: '+G('Bakeriet i Å','Bakeriet i Å')+' — <b>auki 9–15, nyt ehtii</b>',dur:'30 min'},
+   {t:'10:45',i:'sight',x:G('Å i Lofoten','Å:n kalastajakylämuseo')+' — E10 päättyy tähän',dur:'1 h 15'},
+   {t:'12:30',i:'sight',x:'Kuvapysähdykset: '+G('Hamnøyn kuvasilta','Hamnøyn silta')+' & '+G('Sakrisøy','Sakrisøyn keltaiset mökit'),dur:'45 min'},
+   {t:'13:30',i:'food',x:'Lounas: '+G('Anita\'s Seafood','Anita\'s Seafood')+' — kuuluisa fish burger',dur:'45 min'},
+   {t:'14:30',i:'sight',x:G('Reine')+' — kylän kierros vuonon suulla',dur:'45 min'},
+   {t:'15:30',i:'hike',x:G('Reinebringen')+' — 1 978 porrasta Lofoottien ikonisimpaan näkymään',dur:'~3 h'},
+   {t:'19:00',i:'move',x:'Check-in '+G('Moskenes Camping')+' — sataman vieressä (portin koodi sähköpostista)'},
+   {t:'20:00',i:'food',x:'Päätösillallinen Lofooteilla: '+G('Maren Anna','Maren Anna')+' <i class="eur">€€€</i> Sørvågenissa — <b>varaa pöytä</b>',dur:'1,5 h'}
+  ],
+  night:'Leiripaikka 46 C on ilman sähköä — akku ladattu Leknesissä. Reinebringen: tarkista polun tilanne FB:stä. Aamulla lautalle: kaistalle viim. 08:30.'},
+
+ {date:'Torstai 23.7',c:'var(--lilac)',title:'Lautta Bodøhön & Silvervägen Luleåan',who:'⛴ 3,5 h + 505 km',
+  rows:[
+   {t:'07:30',i:'move',x:'Herätys, pakkaus & aamiainen'},
+   {t:'08:15',i:'move',x:'Ajo '+G('Moskenes ferjekai','Moskenesin lauttasatamaan')+' — varattujen kaistalle (viim. 45 min ennen)'},
+   {t:'09:15',i:'move',x:'<b>⛴ Lautta Moskenes → Bodø</b> — hyvästit Lofooteille kannelta',dur:'3 h 30'},
+   {t:'12:45',i:'food',x:'Maissa: lataus + lounas '+G('Bodø','Bodøssa'),dur:'1 h'},
+   {t:'14:00',i:'move',x:'Rv95 Silvervägen itään: Arjeplog → Arvidsjaur (latauspysähdys) → Luleå',dur:'~6,5 h'},
+   {t:'20:30',i:'move',x:'Check-in '+G('Best Western Savoy Luleå','Best Western Savoy')+' — hotelliyö ja kunnon suihkut'},
+   {t:'21:00',i:'food',x:'Iltapala: '+G('Bistro Norrland','Bistro Norrland')+' <i class="eur">€€</i> tai hotellin baari',opt:1}
+  ],
+  night:'Norja ja Ruotsi ovat samassa ajassa — kello siirtyy vasta huomenna Suomessa. Aamiainen kuuluu huoneeseen.'},
+
+ {date:'Perjantai 24.7',c:'var(--azur-deep)',title:'Luleå → Viitasaari',who:'~465 km · E4 + Vt4',
+  rows:[
+   {t:'09:00',i:'sight',x:G('Gammelstadin kirkkokaupunki','Gammelstadin kirkkokaupunki (UNESCO)')+' — 400 punaista kirkkotupaa',dur:'1 h'},
+   {t:'10:30',i:'move',x:'E4 etelään: Haparanda → Tornion raja. <b>Kello +1 h Suomeen</b>'},
+   {t:'13:30',i:'food',x:'Latauslounas Kemissä tai Oulussa',dur:'45 min'},
+   {t:'15:00',i:'move',x:'Vt4 etelään → Viitasaari'},
+   {t:'17:30',i:'move',x:'Check-in '+G('Wiikki Majatalo','Wiikki Majatalossa')+' — <b>ikkuna 15–18</b>'},
+   {t:'19:00',i:'food',x:'Illallinen ja rauhallinen ilta majatalossa'}
+  ],
+  night:'Check-in sulkeutuu klo 18 — pidä aikataulusta kiinni. Huominen on lyhyt ajopäivä kotiin.'},
+
+ {date:'Lauantai 25.7',c:'var(--transit)',title:'Viitasaari → Espoo',who:'360 km · Vt4',
+  rows:[
+   {t:'09:30',i:'move',x:'Aamiainen + checkout (8–11)'},
+   {t:'10:00',i:'move',x:'Vt4 etelään — lataus Jyväskylässä tarvittaessa',dur:'360 km'},
+   {t:'14:30',i:'move',x:'<b>Kotona Espoossa</b> 🎉 Mittarissa ~3 300 km'}
+  ],
+  night:'Pyykit, kuvien läpikäynti ja pizzat. Hyvin ajettu!'}
+];
+
+/* =================================================================
+   RENDER: DAYS
+   ================================================================= */
+const daysEl=document.getElementById('days');
+const dpEl=document.getElementById('daypick');
+const idle=cb=>'requestIdleCallback'in window?requestIdleCallback(cb,{timeout:1400}):setTimeout(cb,120);
+const DAY_CODES=['d18','d19','d20','d21','d22','d23','d24','d25'];
+const DAY_NUM={},DAY_STEPS=[];
+let dayEls=[],daysRendered=false,dayNumbersReady=false;
+function defaultDay(){
+  const now=new Date();
+  if(now.getFullYear()===2026&&now.getMonth()===6){const dd=now.getDate();if(dd>=18&&dd<=25)return dd-18;}
+  return 0;
+}
+const decCache=new Map();
+function placeForHref(href){
+  const dec=decodeURIComponent(href);
+  return PLACES.find(p=>{
+    let d=decCache.get(p.n);
+    if(d==null){d=decodeURIComponent(gq(p.q||p.n));decCache.set(p.n,d);}
+    return d===dec;
+  });
+}
+function rowPlacesFromHtml(html){
+  const found=[],rx=/href="([^"]+)"/g;
+  let m;
+  while((m=rx.exec(html))){
+    const pl=placeForHref(m[1]);
+    if(pl&&!found.includes(pl))found.push(pl);
+  }
+  return found;
+}
+function ensureDayNumbers(){
+  if(dayNumbersReady)return;
+  DAYS.forEach((D,i)=>{
+    const map={};let step=0;
+    DAY_STEPS[i]=D.rows.map(r=>{
+      const rowPlaces=rowPlacesFromHtml(r.x);
+      if(!rowPlaces.length)return null;
+      step++;
+      rowPlaces.forEach(pl=>{if(map[pl.n]==null)map[pl.n]=step;});
+      return {num:step,primary:rowPlaces[0]};
+    });
+    DAY_NUM[DAY_CODES[i]]=map;
+  });
+  dayNumbersReady=true;
+}
+function applyDay(sel){
+  dayEls.forEach((el,i)=>{el.style.display=(sel==='all'||sel===i)?'':'none';});
+  [...dpEl.children].forEach(c=>c.classList.toggle('on',c.dataset.d===String(sel)));
+}
+function ensureDays(){
+  if(daysRendered)return;
+  ensureDayNumbers();
+  const frag=document.createDocumentFragment();
+  DAYS.forEach((D,di)=>{
+    const rows=D.rows.map((r,ri)=>{
+      const step=DAY_STEPS[di]&&DAY_STEPS[di][ri];
+      const line=step?'<a class="glnum c-'+step.primary.cat+'" href="'+gq(step.primary.q||step.primary.n)+'" target="_blank" rel="noopener" aria-label="Avaa kartalla nro '+step.num+'">'+step.num+'</a>':'<div class="gl"></div>';
+      return '<div class="tl-row '+(r.i||'')+'"><div class="tm">'+r.t+'</div><div class="ln">'+line+'</div><div class="tx">'+r.x+
+        (r.dur?'<span class="dur">'+r.dur+'</span>':'')+(r.opt?'<span class="opt">○ optio</span>':'')+'</div></div>';
+    }).join('');
+    const foot=D.night?'<div class="day-f"><span class="lb">Huom</span><div>'+D.night+'</div></div>':'';
+    const parts=D.date.split(' '),dw=parts[0]||'',dn=parts[1]||'';
+    const el=document.createElement('article');el.className='day';
+    if(D.c)el.style.borderTop='3px solid '+D.c;
+    el.innerHTML='<div class="day-h"><span class="day-date" aria-hidden="true"><span class="dw">'+dw.slice(0,2).toUpperCase()+'</span><span class="dn">'+dn+'</span></span>'+
+      '<div><div class="dt">'+dw+'</div><h3 class="ti">'+D.title+'</h3></div></div>'+
+      '<div class="tl">'+rows+'</div>'+foot;
+    el.dataset.idx=String(di);
+    frag.appendChild(el);
+  });
+  daysEl.appendChild(frag);
+  DAYS.forEach((D,i)=>{
+    const parts=D.date.split(' ');
+    const btn=document.createElement('button');btn.className='dp';btn.dataset.d=String(i);
+    if(D.c)btn.style.borderBottomColor=D.c;
+    btn.innerHTML='<span class="w">'+(parts[0]||'').slice(0,2).toUpperCase()+'</span><span class="n">'+(parts[1]||'')+'</span>';
+    btn.addEventListener('click',()=>applyDay(i));
+    dpEl.appendChild(btn);
+  });
+  const dpAll=document.createElement('button');dpAll.className='dp dp-all';dpAll.dataset.d='all';dpAll.textContent='Koko viikko';
+  dpAll.addEventListener('click',()=>applyDay('all'));dpEl.appendChild(dpAll);
+  dayEls=[...daysEl.children];
+  daysRendered=true;
+  applyDay(defaultDay());
+}
+function showDay(sel){ensureDays();applyDay(sel);}
+
+/* =================================================================
+   RENDER: ACTIVITIES
+   ================================================================= */
+const actsEl=document.getElementById('acts');
+const DAY_ORDER={d18:0,d19:1,d20:2,d21:3,d22:4,d23:5,d24:6,d25:7};
+const ACT_KIND_OVERRIDES={
+  'Reinefjordenin melonta':'sight','Trollfjord-risteily (RIB)':'sight'
+};
+let actsRendered=false;
+function isActivityPlace(p){return p&&['sight','beach','food','bar','trip','hike'].includes(p.cat);}
+function actKind(p){
+  if(ACT_KIND_OVERRIDES[p.n])return ACT_KIND_OVERRIDES[p.n];
+  if(p.cat==='food'||p.cat==='bar'||p.cat==='beach')return p.cat;
+  return 'sight';
+}
+function activityMeta(p){
+  // Only surface a price when something actually costs money — free is the
+  // default for sights/beaches, so tagging only paid spots keeps the signal.
+  if(!p.pr||p.pr==='ilmainen')return '';
+  return p.pr==='VAIN KÄTEINEN'?'käteinen':p.pr;
+}
+function activityDays(p){
+  ensureDayNumbers();
+  const found=DAY_CODES.filter(code=>DAY_NUM[code]&&DAY_NUM[code][p.n]!=null);
+  const direct=p.dd||[];
+  return [...new Set([...found,...direct])].sort((a,b)=>(DAY_ORDER[a]??99)-(DAY_ORDER[b]??99));
+}
+function activityDayRank(p){
+  const dd=activityDays(p);
+  if(!dd.length)return 99;
+  return Math.min(...dd.map(d=>DAY_ORDER[d]??99));
+}
+function activityScheduleRank(p){
+  ensureDayNumbers();
+  let best=9999;
+  DAY_CODES.forEach((code,di)=>{
+    const step=DAY_NUM[code]&&DAY_NUM[code][p.n];
+    if(step!=null)best=Math.min(best,di*100+step);
+  });
+  if(best<9999)return best;
+  return activityDayRank(p)*100+80;
+}
+function sortActivities(items){
+  return [...items].sort((a,b)=>{
+    const orderDiff=activityScheduleRank(a)-activityScheduleRank(b);
+    if(orderDiff)return orderDiff;
+    return a.n.localeCompare(b.n,'fi',{sensitivity:'base'});
+  });
+}
+const EXTRA_KIND_ORDER={sight:0,food:1,beach:2,bar:3};
+let extraPlacesCache=null;
+function extraPlaces(){
+  if(extraPlacesCache)return extraPlacesCache;
+  ensureDayNumbers();
+  extraPlacesCache=PLACES.filter(p=>isActivityPlace(p)&&activityDays(p).length===0)
+    .sort((a,b)=>((EXTRA_KIND_ORDER[actKind(a)]??9)-(EXTRA_KIND_ORDER[actKind(b)]??9))||a.n.localeCompare(b.n,'fi'));
+  return extraPlacesCache;
+}
+function extraNumber(p){
+  const idx=extraPlaces().findIndex(x=>x.n===p.n);
+  return idx>=0?idx+1:0;
+}
+function renderActivityRow(p,num){
+  const a=document.createElement('a');a.className='arow';
+  a.href=gq(p.q||p.n);a.target='_blank';a.rel='noopener';
+  const meta=activityMeta(p);
+  a.innerHTML=(num?'<span class="extra-num c-'+p.cat+'">'+num+'</span>':'')+
+    '<span class="nm">'+(p.star?'<span class="st">★</span> ':'')+p.n+
+    (p.d?'<span class="ad">'+p.d+'</span>':'')+
+    (p.tip?'<span class="atip">'+p.tip+'</span>':'')+'</span>'+
+    (meta?'<span class="pr">'+meta+'</span>':'')+
+    '<svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+  return a;
+}
+function ensureActivities(){
+  if(actsRendered)return;
+  // Vain kohteet joita ei ole kiinnitetty mihinkään päivään: varasuunnitelmat.
+  const extras=extraPlaces();
+  const list=document.createElement('div');list.className='arows';
+  extras.forEach((p,i)=>list.appendChild(renderActivityRow(p,i+1)));
+  actsEl.appendChild(list);
+  actsRendered=true;
+}
+
+
+/* =================================================================
+   RENDER: TIPS (Käytännön asiat)
+   ================================================================= */
+const TIPS=[
+  ['Pakkauslista','<b>Ehdottomat</b>Sadekuori + sadehousut, vedenpitävät vaelluskengät, unimaskit (aurinko ei laske!), hyttyskarkote, pipo + hanskat, power bank<b>Autoon nukkumiseen</b>Peitot, tyynyt, lakanat, patja/ilmapatja, ikkunapimennykset, korvatulpat<b>Paperit & raha</b>Henkkarit, ajokortti, EHIC-kortti, matkavakuutus, kortit (käteistä ei juuri tarvita)<b>Sauna & ranta</b>Uikkarit, nopeasti kuivuva pyyhe<b>Tarkat listat</b>PDF:t yllä — matkustajan lista ja Tesla-lista','tip-pack'],
+  ['Keskiyön aurinko','Aurinko ei laske Lofooteilla koko reissun aikana. Käyttäkää se hyödyksi: suosituimmat kohteet (Reinebringen, rannat, kylät) ovat iltaisin klo 19 jälkeen lähes tyhjiä ja valo on kuvaamiseen parhaimmillaan. Unimaskit ja ikkunapimennykset tekevät yöunista normaalit.'],
+  ['Sää & vaellukset','Sää vaihtuu 15-30 minuutin välein — sadekuori ja lämmin kerros aina mukaan, vaikka lähtisitte auringossa. Seuratkaa Yr.no:ta (paikallisten luottosovellus). Reinebringenin portaat ovat jyrkät ja märkinä liukkaat; polun mahdolliset huoltosulut näkyvät sen FB-sivulla. Huipuille ei kovassa tuulessa.'],
+  ['Pysäköinti & säännöt','Lofooteilla pysäköidään vain merkityille paikoille — Reine on kieltoaluetta ja valvonta sakottaa herkästi. Hauklandin ja Reinebringenin parkit täyttyvät klo 10 mennessä: menkää aikaisin tai illalla. Hätänumero kaikissa kolmessa maassa on 112. Jokamiehenoikeus (allemannsrett) sallii liikkumisen — roskat aina mukaan.'],
+  ['Rahat & rajat','Norja ja Ruotsi ovat käytännössä käteisvapaita — lähimaksu käy kaikkialla (NOK/SEK veloitus kortilta). Aikaero: Ruotsi ja Norja −1 h Suomesta. EU/ETA-roaming kattaa kaikki kolme maata normaalisti. Alkoholi on Norjassa kallista ja väkevät saa vain Vinmonopoletista — täydennä Suomessa/Ruotsissa.'],
+  ['Ruoka & kaupat','Norjassa syöminen on kallista: ruokaostokset kannattaa tehdä isosti Svolværissä ja Leknesissä (lännempänä kaupat harvenevat). Illallisvaraukset etukäteen: Børsen Spiseri (ma) ja Maren Anna (ke). Anita\'s Seafoodin fish burger hoitaa parhaan lounaan ilman varausta.'],
+  ['Lautta & tollit','Rekisteröi rekisterikilpi Epass24:ään ennen lähtöä — Norjan tiemaksut ja tunnelit laskutetaan silloin automaattisesti ilman käsittelylisiä. Lautalle (to 9:15) varattujen kaistalle viimeistään 8:30. Moskenes Campingin portin ja saniteettitilojen koodi tulee sähköpostiin 2 pv ennen saapumista.']
+];
+const tipsEl=document.getElementById('tips');
+let tipsRendered=false;
+function ensureTips(){
+  if(tipsRendered)return;
+  const frag=document.createDocumentFragment();
+  TIPS.forEach(([h,p,cls])=>{const d=document.createElement('div');d.className='tip'+(cls?' '+cls:'');d.innerHTML='<h3>'+h+'</h3><p>'+p+'</p>';frag.appendChild(d);});
+  tipsEl.appendChild(frag);
+  tipsRendered=true;
+}
+idle(ensureTips);
+
+// Muista-palkin sovelluslinkit: yksi linkki/appi, avaa oikean kaupan laitteen mukaan.
+(function(){
+  const ua=navigator.userAgent||'';
+  const isAndroid=/Android/i.test(ua);
+  document.querySelectorAll('.qm-app').forEach(a=>{a.href=isAndroid?a.dataset.android:a.dataset.ios;});
+})();
+
+/* =================================================================
+   MAP, loaded only when the map tab opens
+   ================================================================= */
+const LEAFLET_CSS='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+const LEAFLET_JS='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+const ZOOMS={lofoten:[[67.85,12.80],[68.42,15.05]]};
+let _map=null,mapInitPromise=null,fsBtn=null;
+let markers=[];
+let curMode={type:'day',v:DAY_CODES[defaultDay()]||'d18'};
+window._map=null;
+
+function warmOrigin(href){
+  if(document.querySelector('link[data-warm="'+href+'"]'))return;
+  const link=document.createElement('link');
+  link.rel='preconnect';
+  link.href=href;
+  link.dataset.warm=href;
+  document.head.appendChild(link);
+}
+function loadLeaflet(){
+  if(window.L)return Promise.resolve();
+  warmOrigin('https://unpkg.com');
+  warmOrigin('https://mt0.google.com');
+  if(!document.querySelector('link[data-leaflet]')){
+    const css=document.createElement('link');
+    css.rel='stylesheet';
+    css.href=LEAFLET_CSS;
+    css.integrity='sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+    css.crossOrigin='';
+    css.dataset.leaflet='1';
+    document.head.appendChild(css);
+  }
+  return new Promise((resolve,reject)=>{
+    const existing=document.querySelector('script[data-leaflet]');
+    if(existing){existing.addEventListener('load',resolve,{once:true});existing.addEventListener('error',reject,{once:true});return;}
+    const js=document.createElement('script');
+    js.src=LEAFLET_JS;
+    js.integrity='sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    js.crossOrigin='';
+    js.dataset.leaflet='1';
+    js.onload=resolve;
+    js.onerror=()=>{js.remove();reject();};
+    document.head.appendChild(js);
+  });
+}
+function mapPadding(){return matchMedia('(max-width:640px)').matches?[26,26]:[48,48];}
+function fitMaxZoom(){return matchMedia('(max-width:640px)').matches?13:15;}
+function mkIcon(p,full,num){
+  if(p.cat==='home'&&!num)return L.divIcon({className:'',html:'<div class="mk mk-home">⌂</div>',iconSize:[28,28],iconAnchor:[14,14],popupAnchor:[0,-14]});
+  if(num)return L.divIcon({className:'',html:'<div class="mk2 mk2-num">'+num+'</div>',iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]});
+  const sz=full?22:12,a=sz/2;
+  return L.divIcon({className:'',html:'<div class="mk2 c-'+p.cat+(full?'':' mk2-dot')+'"></div>',iconSize:[sz,sz],iconAnchor:[a,a],popupAnchor:[0,-a]});
+}
+function matches(p){
+  if(p.cat==='home')return curMode.type!=='extra';
+  if(curMode.type==='day')return !!(DAY_NUM[curMode.v]&&DAY_NUM[curMode.v][p.n]!=null);
+  if(curMode.type==='extra')return extraNumber(p)>0;
+  return true;
+}
+function tierFull(p){
+  if(!_map)return true;
+  if(p.cat==='home'||p.star)return true;
+  if(curMode.type==='day'||curMode.type==='extra')return true;
+  if(p.cat==='transit')return false;
+  return _map.getZoom()>=15;
+}
+function visiblePoints(includeHome){
+  return markers.filter(m=>{
+    const p=m._place;
+    return matches(p)&&(includeHome||p.cat!=='home')&&p.cat!=='transit';
+  }).map(m=>m.getLatLng());
+}
+function refresh(fit){
+  if(!_map)return;
+  const isDay=curMode.type==='day';
+  const isExtra=curMode.type==='extra';
+  const dmap=isDay?(DAY_NUM[curMode.v]||{}):null;
+  markers.forEach(mk=>{
+    const p=mk._place;
+    if(matches(p)){
+      const num=isDay?(dmap[p.n]||0):isExtra?extraNumber(p):0;
+      mk.setIcon(mkIcon(p,tierFull(p),num>0?num:null));
+      if(!_map.hasLayer(mk))mk.addTo(_map);
+    }else if(_map.hasLayer(mk))_map.removeLayer(mk);
+  });
+  if(isDay){
+    const ll=Object.keys(dmap).map(n=>{const mk=markers.find(m=>m._place.n===n);return mk&&mk.getLatLng();}).filter(Boolean);
+    if(fit&&ll.length)_map.fitBounds(L.latLngBounds(ll),{padding:mapPadding(),maxZoom:fitMaxZoom()});
+  }else if(isExtra&&fit){
+    _map.fitBounds(ZOOMS.lofoten,{padding:mapPadding()});
+  }else if(fit){
+    const pts=visiblePoints(false);
+    if(pts.length)_map.fitBounds(L.latLngBounds(pts),{padding:mapPadding(),maxZoom:fitMaxZoom()});
+    else _map.fitBounds(ZOOMS.lofoten,{padding:mapPadding()});
+  }
+}
+function setChip(el){
+  document.querySelectorAll('#daybar .chip-btn,#extrabar .chip-btn').forEach(x=>x.classList.toggle('on',x===el));
+}
+function setMapFullscreen(on){
+  document.body.classList.toggle('map-fullscreen',on);
+  if(fsBtn){fsBtn.innerHTML=on?'×':'⛶';fsBtn.title=on?'Sulje koko näyttö':'Koko näyttö';fsBtn.setAttribute('aria-label',fsBtn.title);}
+  setTimeout(()=>{if(_map){_map.invalidateSize();refresh(false);}},120);
+}
+function initMap(){
+  if(mapInitPromise)return mapInitPromise;
+  ensureDayNumbers();
+  mapInitPromise=loadLeaflet().then(()=>{
+    const el=document.getElementById('map');
+    el.classList.remove('map-error');
+    _map=L.map(el,{preferCanvas:true,scrollWheelZoom:false,zoomControl:true,zoomSnap:.5,wheelPxPerZoomLevel:90,tap:true});
+    window._map=_map;
+    const googleTiles=L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}&hl=fi&apistyle=s.t%3A2%7Cs.e%3Al%7Cp.v%3Aoff',{
+      maxZoom:20,subdomains:['mt0'],attribution:'&copy; Google Maps',updateWhenIdle:true,updateWhenZooming:false,keepBuffer:1
+    }).addTo(_map);
+    let tileErrors=0,osmTiles=null;
+    googleTiles.on('tileerror',()=>{
+      tileErrors++;
+      if(tileErrors<3||osmTiles)return;
+      osmTiles=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        maxZoom:19,attribution:'&copy; OpenStreetMap',updateWhenIdle:true,updateWhenZooming:false,keepBuffer:1
+      }).addTo(_map);
+      _map.removeLayer(googleTiles);
+    });
+    const FsCtl=L.Control.extend({options:{position:'topleft'},onAdd:function(){
+      fsBtn=L.DomUtil.create('a','leaflet-bar fs-btn');
+      fsBtn.href='#';
+      fsBtn.title='Koko näyttö';
+      fsBtn.setAttribute('aria-label','Koko näyttö');
+      fsBtn.innerHTML='⛶';
+      L.DomEvent.on(fsBtn,'click',L.DomEvent.stop).on(fsBtn,'click',()=>setMapFullscreen(!document.body.classList.contains('map-fullscreen')));
+      return fsBtn;
+    }});
+    _map.addControl(new FsCtl());
+    markers=[];
+    PLACES.forEach(p=>{
+      if(typeof p.la!=='number'||typeof p.lo!=='number')return;
+      const m=L.marker([p.la,p.lo],{icon:mkIcon(p,true)});
+      m._place=p;
+      m.bindPopup('<b class="t">'+(p.star?'★ ':'')+p.n+'</b><div class="m">'+p.d+'</div>'+
+        (p.pr?'<div class="pr">'+p.pr+'</div>':'')+(p.tip?'<div class="tp">'+p.tip+'</div>':'')+
+        '<a class="go" href="'+gq(p.q||p.n)+'" target="_blank" rel="noopener">Avaa Google Mapsissa →</a>');
+      m.bindTooltip(p.n,p.lbl?{permanent:true,direction:'right',className:'map-tip',offset:[12,0]}:{direction:'top',className:'map-tip',offset:[0,-13]});
+      markers.push(m);
+    });
+    _map.on('zoomend',()=>refresh(false));
+    _map.on('click',()=>_map.scrollWheelZoom.enable());
+    _map.on('mouseout',()=>_map.scrollWheelZoom.disable());
+    document.querySelectorAll('[data-df]').forEach(b=>b.addEventListener('click',()=>{
+      curMode={type:'day',v:b.dataset.df};setChip(b);refresh(true);
+    }));
+    document.querySelectorAll('[data-extra]').forEach(b=>b.addEventListener('click',()=>{
+      curMode={type:'extra'};setChip(b);refresh(true);
+    }));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('map-fullscreen'))setMapFullscreen(false);});
+    el.classList.remove('map-loading');
+    const initialChip=document.querySelector('[data-df="'+curMode.v+'"]')||document.querySelector('[data-df="d18"]');
+    if(initialChip)setChip(initialChip);
+    refresh(true);
+    return _map;
+  }).catch(err=>{
+    const el=document.getElementById('map');
+    el.classList.remove('map-loading');
+    el.classList.add('map-error');
+    mapInitPromise=null;
+  });
+  return mapInitPromise;
+}
+function openMap(){
+  initMap().then(()=>{
+    if(!_map)return;
+    _map.invalidateSize();
+    refresh(true);
+  });
+}
+
+/* =================================================================
+   TABS
+   ================================================================= */
+const _navEl=document.querySelector('.nav');
+addEventListener('scroll',()=>_navEl.classList.toggle('scrolled',scrollY>8),{passive:true});
+function ensureTabContent(id){
+  if(id==='paivat')ensureDays();
+  else if(id==='aktiviteetit')ensureActivities();
+  else if(id==='yleiskuva')ensureTips();
+}
+function showTab(id,push){
+  ensureTabContent(id);
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+id));
+  document.querySelectorAll('.tab').forEach(t=>{const on=t.dataset.tab===id;t.classList.toggle('on',on);t.setAttribute('aria-selected',on?'true':'false');});
+  if(push!==false)history.replaceState(null,'','#'+id);
+  window.scrollTo({top:0});
+  const onTab=document.querySelector('.tab.on');
+  if(onTab)onTab.scrollIntoView({inline:'center',block:'nearest'});
+  if(id==='kartta')setTimeout(openMap,80);
+}
+document.querySelectorAll('[data-tab]').forEach(t=>t.addEventListener('click',e=>{e.preventDefault();showTab(t.dataset.tab);}));
+addEventListener('hashchange',()=>{
+  const id=(location.hash||'#yleiskuva').slice(1);
+  if(document.getElementById('p-'+id))showTab(id,false);
+});
+document.querySelector('.tabs').addEventListener('keydown',e=>{
+  const ts=[...document.querySelectorAll('.tabs .tab')];
+  const i=ts.indexOf(document.activeElement);
+  if(i<0)return;
+  let j=null;
+  if(e.key==='ArrowRight')j=(i+1)%ts.length;
+  else if(e.key==='ArrowLeft')j=(i-1+ts.length)%ts.length;
+  else if(e.key==='Home')j=0;
+  else if(e.key==='End')j=ts.length-1;
+  if(j!==null){e.preventDefault();ts[j].focus();showTab(ts[j].dataset.tab);}
+});
+if(matchMedia('(min-width:941px)').matches)document.querySelectorAll('.sec-acc').forEach(d=>d.open=true);
+document.querySelectorAll('.hero-toc a').forEach(t=>t.addEventListener('click',()=>{
+  if(t.getAttribute('href')==='#kaytannot')ensureTips();
+  const sec=document.querySelector(t.getAttribute('href'));const det=sec&&sec.querySelector('.sec-acc');if(det)det.open=true;
+}));
+const initial=(location.hash||'#yleiskuva').slice(1);
+if(document.getElementById('p-'+initial))showTab(initial,false);
+
+/* reaaliaikainen meriveden lampotila (Open-Meteo Marine, ei avainta) */
+let weatherLoaded=false;
+const WEATHER_TTL=1000*60*30;
+function fetchJson(url,timeout){
+  if(!('AbortController'in window))return fetch(url).then(r=>r.ok?r.json():Promise.reject());
+  const ctrl=new AbortController();
+  const timer=setTimeout(()=>ctrl.abort(),timeout);
+  return fetch(url,{signal:ctrl.signal}).then(r=>r.ok?r.json():Promise.reject()).finally(()=>clearTimeout(timer));
+}
+function cachedJson(key,url,ttl){
+  const now=Date.now();
+  try{
+    const hit=JSON.parse(localStorage.getItem(key)||'null');
+    if(hit&&now-hit.t<ttl)return Promise.resolve(hit.d);
+  }catch(e){}
+  return fetchJson(url,4500).then(d=>{
+    try{localStorage.setItem(key,JSON.stringify({t:now,d:d}));}catch(e){}
+    return d;
+  });
+}
+function loadWeather(){
+  if(weatherLoaded)return;
+  weatherLoaded=true;
+  const el=document.getElementById('seatemp');if(!el)return;
+  cachedJson('lofootit:sea-temp','https://marine-api.open-meteo.com/v1/marine?latitude=67.95&longitude=13.35&current=sea_surface_temperature',WEATHER_TTL)
+    .then(d=>{const t=d&&d.current&&d.current.sea_surface_temperature;
+      if(typeof t==='number')el.textContent=Math.round(t)+' °C';})
+    .catch(()=>{});
+
+  const airEl=document.getElementById('airtemp');
+  const rng=a=>{const nums=(a||[]).filter(x=>typeof x==='number');if(!nums.length)return null;const lo=Math.round(Math.min(...nums)),hi=Math.round(Math.max(...nums));return lo===hi?hi+' °C':lo+'-'+hi+' °C';};
+  if(airEl){
+    cachedJson('lofootit:air-temp','https://api.open-meteo.com/v1/forecast?latitude=68.09&longitude=13.55&daily=temperature_2m_max,temperature_2m_min&start_date=2026-07-20&end_date=2026-07-23&timezone=Europe%2FOslo',WEATHER_TTL)
+      .then(d=>{const mx=d&&d.daily&&d.daily.temperature_2m_max,mn=d&&d.daily&&d.daily.temperature_2m_min;const dr=rng(mx),nr=rng(mn);
+        if(dr&&nr)airEl.textContent='Päivä '+dr+' · yö '+nr;})
+      .catch(()=>{});
+  }
+
+  const mountainEl=document.getElementById('mountaintemp');
+  if(mountainEl){
+    cachedJson('lofootit:mountain-temp','https://api.open-meteo.com/v1/forecast?latitude=67.928&longitude=13.07&elevation=450&daily=temperature_2m_max,temperature_2m_min&start_date=2026-07-22&end_date=2026-07-22&timezone=Europe%2FOslo',WEATHER_TTL)
+      .then(d=>{const mx=d&&d.daily&&d.daily.temperature_2m_max&&d.daily.temperature_2m_max[0],mn=d&&d.daily&&d.daily.temperature_2m_min&&d.daily.temperature_2m_min[0];
+        if(typeof mx==='number'&&typeof mn==='number')mountainEl.textContent='~'+Math.round(mn)+'-'+Math.round(mx)+' °C';})
+      .catch(()=>{});
+  }
+}
+const weatherRoot=document.getElementById('kamppa');
+if('IntersectionObserver'in window&&weatherRoot){
+  const weatherObserver=new IntersectionObserver(entries=>{
+    if(entries.some(e=>e.isIntersecting)){weatherObserver.disconnect();loadWeather();}
+  },{threshold:.25});
+  weatherObserver.observe(weatherRoot);
+}else{
+  idle(loadWeather);
+}
+
+/* MM-katsomoiden Google Maps -linkit (samat kuin kartalla) */
+document.querySelectorAll('a.mlink[data-place]').forEach(a=>{
+  const pl=PLACES.find(p=>p.n===a.dataset.place);
+  if(pl){a.href=gq(pl.q||pl.n);a.target='_blank';a.rel='noopener';}
+});
+</script>
+</body>
+</html>
