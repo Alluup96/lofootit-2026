@@ -729,7 +729,7 @@ const PLACES = [
   /* ---- ruoka & kahvilat ---- */
   {n:'Børsen Spiseri',cat:'food',zone:'lofoten',la:68.2345,lo:14.5794,d:'Illallinen vuoden 1828 laituriaitassa Svinøyalla: kuivakalaa ja arktista menua, Lofoottien klassikko.',pr:'€€€',tip:'Vaihtoehtoinen fine dining Svolværissä. Varaa pöytä etukäteen netistä.',q:'Børsen Spiseri Svolvær'},
   {n:'Fiskekrogen',cat:'food',zone:'lofoten',la:68.15372,lo:14.20339,star:1,d:'Henningsværin klassikko satamalaiturilla vuodesta 1989: legendaarinen kalakeitto ja arktista fine diningia.',pr:'€€€',tip:'Pöytävaraus ma 20.7 klo 19:15 ✓',q:'Fiskekrogen Henningsvær'},
-  {n:'Makalaus',cat:'food',zone:'lofoten',la:68.14871,lo:13.61503,d:'Rento ja hyvin arvioitu ravintola Leknesin keskustassa.',pr:'€€',tip:'Illallinen tiistaina ennen ajoa Beach Campille.',q:'Makalaus Leknes'},
+  {n:'Makalaus',cat:'food',zone:'lofoten',la:68.14871,lo:13.61503,d:'Rento ja hyvin arvioitu ravintola Leknesin keskustassa.',pr:'€€',tip:'Lounas tiistaina klo 13.15 latauksen ja ostosten yhteydessä.',q:'Makalaus Leknes'},
   {n:'Maren Anna',cat:'food',zone:'lofoten',la:67.8897,lo:13.0237,star:1,d:'Sørvågenin rantaravintola: kalakeitto ja ilta-aurinko laiturilla, etelän paras pöytä.',pr:'€€-€€€',tip:'Varaa pöytä keskiviikolle etukäteen.',q:'Maren Anna Sørvågen'},
   {n:'Anita\'s Seafood',cat:'food',zone:'lofoten',la:67.9418,lo:13.1119,star:1,d:'Sakrisøyn legendaarinen kalapuoti: fish burger, katkarapuleivät ja kuivakalasnacksit.',pr:'burger ~200 NOK',tip:'Joka päivä ~11-19, ei varauksia, mutta jono etenee nopeasti.',q:'Anitas Sjømat Sakrisøy'},
   {n:'Henningsvær Lysstøperi & Café',cat:'food',zone:'lofoten',la:68.1545,lo:14.2021,d:'Kynttilävalimo-kahvila: kuuluisat kanelipullat ja hyvä kahvi.',pr:'€',tip:'Kesällä auki päivittäin ~11.30-18.',q:'Henningsvær Lysstøperi'},
@@ -794,8 +794,8 @@ const DAYS = [
    {t:'13:00',i:'sight',x:G('Austnesfjorden','Austnesfjordenin levähdyspaikka')+', ensimmäinen postikorttipysähdys',dur:'20 min'},
    {t:'13:30',i:'food',x:'Lounas + lataus + ruokaostokset: '+G('Svolvær')+', Lofoottien "pääkaupunki"',dur:'1 h 15'},
    {t:'15:00',i:'move',x:'Check-in '+G('Skårungen','Skårungen (ZONE A)')+'. Varatkaa samalla sauna- ja paljuvuoro respasta'},
-   {t:'16:00',i:'sight',x:G('Henningsvær')+': kylän kierros, stadion ja '+G('KaviarFactory')+'. Kahvit '+G('Henningsvær Lysstøperi & Café','Lysstøperissä'),dur:'1 h'},
-   {t:'17:00',i:'hike',x:G('Festvågtind')+', näköalapatikka kylän ylle ennen illallista',dur:'~2 h'},
+   {t:'16:00',i:'hike',x:G('Festvågtind')+', näköalapatikka kylän ylle ennen illallista',dur:'~2 h'},
+   {t:'18:00',i:'sight',x:G('Henningsvær')+': kylän kierros, stadion ja '+G('KaviarFactory')+'. Kahvit '+G('Henningsvær Lysstøperi & Café','Lysstøperissä'),dur:'1 h'},
    {t:'19:15',i:'food',x:'Illallinen: '+G('Fiskekrogen')+' <i class="eur">€€€</i> satamalaiturilla. <b>Pöytävaraus klo 19:15 ✓</b>',dur:'1,5 h'}
   ],
   night:'Koko ilta vietetään Henningsværissä, joten edestakaista ajoa ei tule. Paluu Skårungenille kestää noin 25 minuuttia valoisassa kesäyössä. Kytke auto yöksi leiripistokkeeseen (CEE 16A -adapteri).'},
@@ -806,12 +806,12 @@ const DAYS = [
    {t:'09:30',i:'sight',x:G('Lofotr Viikinkimuseo')+' Borgissa: pitkätalo, laivat ja jousiammunta',dur:'1,5 h'},
    {t:'11:15',i:'sight',x:G('Torvdalshalsen')+'-näköala',dur:'15 min'},
    {t:'12:00',i:'sight',x:G('Eggum «Hode»','Eggumin «Hode» ja rantatie'),dur:'1 h',opt:1},
-   {t:'13:15',i:'food',x:'Lataus, ostokset ja kevyt lounas: '+G('Leknes'),dur:'1 h'},
+   {t:'13:15',i:'food',x:'Lataus ja ostokset '+G('Leknes','Leknesissä')+' + lounas: '+G('Makalaus')+' <i class="eur">€€</i>',dur:'1 h'},
    {t:'14:30',i:'beach',x:G('Hauklandstranda','Haukland')+' & '+G('Uttakleiv')+', pohjolan kaunein rantapari. Välissä nousu '+G('Mannen')+'-harjanteelle',dur:'2,5 h'},
-   {t:'18:00',i:'food',x:'Illallinen: '+G('Makalaus')+' <i class="eur">€€</i> Leknesissä ennen ajoa etelään',dur:'1,5 h'},
-   {t:'19:45',i:'hike',x:G('Offersøykammen')+', lyhyt 360°-huippu ilta-auringossa E10:n varrella',dur:'~1,5 h',opt:1},
+   {t:'18:00',i:'hike',x:G('Offersøykammen')+', lyhyt 360°-huippu ilta-auringossa E10:n varrella',dur:'~1,5 h',opt:1},
    {t:'20:15',i:'move',x:'<b>Saapuminen '+G('Lofoten Beach Camp','Lofoten Beach Campille')+'</b> (drop-in-leirintä)'},
-   {t:'21:00',i:'beach',x:'Iltakävely '+G('Skagsanden','Skagsandenilla')+': surffareita ja peilikuvia valoisassa kesäillassa',dur:'1 h'}
+   {t:'20:30',i:'food',x:'Illallinen oletettavasti '+G('Lofoten Beach Camp','Lofoten Beach Campilla')},
+   {t:'21:30',i:'beach',x:'Iltakävely '+G('Skagsanden','Skagsandenilla')+': surffareita ja peilikuvia valoisassa kesäillassa',dur:'1 h'}
   ],
   night:'Beach Camp ei ota varauksia, joten heinäkuussa kannattaa tarvittaessa poiketa varmistamassa paikka jo iltapäivällä (Leknesistä campille ajaa 25 minuutissa). Jos alue on täynnä, varapaikka on Ramberg kolmen kilometrin päässä. Ota sähköpaikka, jos sellainen on vapaana, ja lataa yön yli.'},
 
@@ -1045,7 +1045,7 @@ const TIPS=[
   ['Sää & vaellukset','Sää vaihtuu 15-30 minuutin välein, joten sadekuori ja lämmin kerros ovat aina mukana, vaikka lähtisitte auringossa. Seuratkaa Yr.no:ta (paikallisten luottosovellus). Reinebringenin portaat ovat jyrkät ja märkinä liukkaat; polun mahdolliset huoltosulut näkyvät sen FB-sivulla. Huipuille ei kovassa tuulessa.'],
   ['Pysäköinti & säännöt','Lofooteilla pysäköidään vain merkityille paikoille, sillä Reine on kieltoaluetta ja valvonta sakottaa herkästi. Hauklandin ja Reinebringenin parkit täyttyvät klo 10 mennessä: menkää aikaisin tai illalla. Hätänumero kaikissa kolmessa maassa on 112. Jokamiehenoikeus (allemannsrett) sallii liikkumisen, kunhan roskat kulkevat aina mukana.'],
   ['Rahat & rajat','Norja ja Ruotsi ovat käytännössä käteisvapaita, ja lähimaksu käy kaikkialla (NOK/SEK veloitus kortilta). Aikaero: Ruotsi ja Norja −1 h Suomesta. EU/ETA-roaming kattaa kaikki kolme maata normaalisti. Alkoholi on Norjassa kallista ja väkevät saa vain Vinmonopoletista, joten täydennä Suomessa tai Ruotsissa.'],
-  ['Ruoka & kaupat','Norjassa syöminen on kallista: ruokaostokset kannattaa tehdä isosti Svolværissä ja Leknesissä (lännempänä kaupat harvenevat). Illalliset: Fiskekrogen ma klo 19:15 (varattu ✓), Makalaus ti Leknesissä ja Maren Anna ke Sørvågenissa (varaa etukäteen). Anita\'s Seafoodin fish burger hoitaa parhaan lounaan ilman varausta.'],
+  ['Ruoka & kaupat','Norjassa syöminen on kallista: ruokaostokset kannattaa tehdä isosti Svolværissä ja Leknesissä (lännempänä kaupat harvenevat). Ruokailut: Fiskekrogen ma klo 19:15 (varattu ✓), Makalaus ti lounaalla Leknesissä, illallinen oletettavasti Lofoten Beach Campilla ja Maren Anna ke Sørvågenissa (varaa etukäteen). Anita\'s Seafoodin fish burger hoitaa parhaan lounaan ilman varausta.'],
   ['Lautta & tollit','Rekisteröi rekisterikilpi Epass24:ään ennen lähtöä, jolloin Norjan tiemaksut ja tunnelit laskutetaan silloin automaattisesti ilman käsittelylisiä. Lautalle (to 9:15) varattujen kaistalle viimeistään 8:30. Moskenes Campingin portin ja saniteettitilojen koodi tulee sähköpostiin 2 pv ennen saapumista.']
 ];
 const tipsEl=document.getElementById('tips');
