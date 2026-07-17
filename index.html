@@ -686,13 +686,13 @@
    ================================================================= */
 const PLACES = [
   /* ---- majoitukset (7 yötä) ---- */
-  {n:'Airbnb Oulu',cat:'home',zone:'route',la:64.99911,lo:25.46715,d:'Yö 1 · saunallinen kaksio Oulun keskustassa. Itsecheck-in lukkolaatikolla klo 16 jälkeen.',tip:'Checkout su klo 12 mennessä, mutta matkaan kannattaa lähteä ajoissa.',q:'Rautatienkatu 80 Oulu'},
-  {n:'Airbnb Vassdalen',cat:'home',zone:'route',la:68.55703,lo:17.73949,d:'Yö 2 · pieni asunto Vassdalenin laaksossa Bjerkvikin kupeessa, E10:n varrella.',tip:'Check-in klo 17 jälkeen · checkout ma klo 14 mennessä.',q:'Vassdalsveien 595 Bjerkvik'},
-  {n:'Skårungen',cat:'home',zone:'lofoten',lbl:1,la:68.2064,lo:14.4261,d:'Yö 3 · varattu ✓ Motorhomes ZONE A. Merinäkymät, sauna & palju, ravintola Kabelvågin kupeessa.',tip:'Check-in 15 → checkout 11. Tarkista varauksesta, sisältyykö sähkö ja sallitaanko auton lataus.',q:'Skårungen Lofoten'},
-  {n:'Lofoten Beach Camp',cat:'home',zone:'lofoten',la:68.10378,lo:13.29315,d:'Yö 4 · drop-in-leirintä suoraan Skagsandenin rannalla: sauna, surffivuokraus ja beach-kahvila.',tip:'Ei varausta; leirintä suosittelee saapumaan sesonkina ennen klo 18. Sähkö on maksullinen lisäpalvelu.',q:'Lofoten Beach Camp'},
-  {n:'Moskenes Camping',cat:'home',zone:'lofoten',lbl:1,la:67.9007,lo:13.0527,d:'Yö 5 · varattu ✓ paikka 46 C (ilman sähköä) lauttasataman vieressä, helppo aamulähtö.',tip:'Check-in/out klo 12. Portin ja saniteettitilan koodi tulee sähköpostiin 2 pv ennen. Wifi-salasana: moskenes.',q:'Moskenes Camping'},
-  {n:'Best Western Savoy Luleå',cat:'home',zone:'route',la:65.58495,lo:22.15795,d:'Yö 6 · hotelliyö Luleån kävelykadulla: kunnon suihkut ja aamiainen lauttapäivän päätteeksi.',tip:'Check-in klo 15 → checkout 12.',q:'Best Western Plus Savoy Luleå'},
-  {n:'Wiikki Majatalo',cat:'home',zone:'route',la:63.18192,lo:25.72323,d:'Yö 7 · perinteinen majatalo Viitasaaressa Vt4:n varrella.',tip:'Check-in vain klo 15–18, älä myöhästy. Checkout 8–11.',q:'Wiikki Majatalo Viitasaari'},
+  {n:'Airbnb Oulu',cat:'home',zone:'route',days:['d18','d19'],la:64.99911,lo:25.46715,d:'Yö 1 · saunallinen kaksio Oulun keskustassa. Itsecheck-in lukkolaatikolla klo 16 jälkeen.',tip:'Checkout su klo 12 mennessä, mutta matkaan kannattaa lähteä ajoissa.',q:'Rautatienkatu 80 Oulu'},
+  {n:'Airbnb Vassdalen',cat:'home',zone:'route',days:['d19','d20'],la:68.55703,lo:17.73949,d:'Yö 2 · pieni asunto Vassdalenin laaksossa Bjerkvikin kupeessa, E10:n varrella.',tip:'Check-in klo 17 jälkeen · checkout ma klo 14 mennessä.',q:'Vassdalsveien 595 Bjerkvik'},
+  {n:'Skårungen',cat:'home',zone:'lofoten',days:['d20','d21'],lbl:1,la:68.2064,lo:14.4261,d:'Yö 3 · varattu ✓ Motorhomes ZONE A. Merinäkymät, sauna & palju, ravintola Kabelvågin kupeessa.',tip:'Check-in 15 → checkout 11. Tarkista varauksesta, sisältyykö sähkö ja sallitaanko auton lataus.',q:'Skårungen Lofoten'},
+  {n:'Lofoten Beach Camp',cat:'home',zone:'lofoten',days:['d21','d22'],la:68.10378,lo:13.29315,d:'Yö 4 · drop-in-leirintä suoraan Skagsandenin rannalla: sauna, surffivuokraus ja beach-kahvila.',tip:'Ei varausta; leirintä suosittelee saapumaan sesonkina ennen klo 18. Sähkö on maksullinen lisäpalvelu.',q:'Lofoten Beach Camp'},
+  {n:'Moskenes Camping',cat:'home',zone:'lofoten',days:['d22','d23'],lbl:1,la:67.9007,lo:13.0527,d:'Yö 5 · varattu ✓ paikka 46 C (ilman sähköä) lauttasataman vieressä, helppo aamulähtö.',tip:'Check-in/out klo 12. Portin ja saniteettitilan koodi tulee sähköpostiin 2 pv ennen. Wifi-salasana: moskenes.',q:'Moskenes Camping'},
+  {n:'Best Western Savoy Luleå',cat:'home',zone:'route',days:['d23','d24'],la:65.58495,lo:22.15795,d:'Yö 6 · hotelliyö Luleån kävelykadulla: kunnon suihkut ja aamiainen lauttapäivän päätteeksi.',tip:'Check-in klo 15 → checkout 12.',q:'Best Western Plus Savoy Luleå'},
+  {n:'Wiikki Majatalo',cat:'home',zone:'route',days:['d24','d25'],la:63.18192,lo:25.72323,d:'Yö 7 · perinteinen majatalo Viitasaaressa Vt4:n varrella.',tip:'Check-in vain klo 15–18, älä myöhästy. Checkout 8–11.',q:'Wiikki Majatalo Viitasaari'},
 
   /* ---- liikenne & lataus ---- */
   {n:'Bjerkvik pikalataus',cat:'transit',zone:'route',la:68.551244,lo:17.555144,d:'Recharge St1 Bjerkvik: pikalataus E10:n varrella, noin 10 minuutin ajomatkan päässä majapaikasta.',q:'Recharge St1 Bjerkvik'},
@@ -1123,8 +1123,10 @@ function mkIcon(p,full,num){
   return L.divIcon({className:'',html:'<div class="mk2 c-'+p.cat+(full?'':' mk2-dot')+'"></div>',iconSize:[sz,sz],iconAnchor:[a,a],popupAnchor:[0,-a]});
 }
 function matches(p){
-  if(p.cat==='home')return curMode.type!=='extra';
-  if(curMode.type==='day')return !!(DAY_NUM[curMode.v]&&DAY_NUM[curMode.v][p.n]!=null);
+  if(curMode.type==='day'){
+    if(p.cat==='home')return !!(p.days&&p.days.includes(curMode.v));
+    return !!(DAY_NUM[curMode.v]&&DAY_NUM[curMode.v][p.n]!=null);
+  }
   if(curMode.type==='extra')return extraNumber(p)>0;
   return true;
 }
