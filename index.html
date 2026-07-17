@@ -576,7 +576,7 @@
           <h3>⚡ Latausstrategia</h3>
           <dl class="kv">
             <dt>Suomi</dt><dd>Jyväskylän Supercharger on Vt4-reitin varrella. Tarkista muut lataukset auton navigaattorista matkapäivänä</dd>
-            <dt>Ruotsi · E10</dt><dd>Pohjoisessa verkko harvenee: suunniteltu pysähdys on Eviny Gällivare. Tarkista Kirunan laturit sovelluksista</dd>
+            <dt>Ruotsi · E10</dt><dd>Pohjoisessa verkko harvenee: suunniteltu pysähdys on Circle K Gällivare, jossa on pikalataus ja Pizza Hut. Tarkista Kirunan laturit sovelluksista</dd>
             <dt>Lofootit</dt><dd>Tesla Superchargerit ovat Svolværissä ja Reinessä; lisäksi Leknesissä, Rambergissa ja Å:ssa on muiden operaattorien CCS-latausta. Tarkista teho ja toimivuus Tesla-, ABRP- tai PlugShare-sovelluksesta</dd>
             <dt>Leirintäyöt</dt><dd>Beach Campilla on 100 maksullista 16 A sähköpaikkaa; Skårungenin sähkö tarkistetaan omasta varauksesta. Moskenesin varattu paikka on ilman sähköä</dd>
             <dt>Paluu</dt><dd>Bodø heti lautan jälkeen täyteen → Silvervägenillä lataus Arjeplog/Arvidsjaur → Luleå</dd>
@@ -695,6 +695,8 @@ const PLACES = [
   {n:'Wiikki Majatalo',cat:'home',zone:'route',days:['d24','d25'],la:63.18192,lo:25.72323,d:'Yö 7 · perinteinen majatalo Viitasaaressa Vt4:n varrella.',tip:'Check-in vain klo 15–18, älä myöhästy. Checkout 8–11.',q:'Wiikki Majatalo Viitasaari'},
 
   /* ---- liikenne & lataus ---- */
+  {n:'Circle K Gällivare',cat:'transit',zone:'route',la:67.1381331,lo:20.6595805,d:'Pikalatausasema Parkgatan 1:ssä. Asemalla on Pizza Hut, istumapaikkoja, WC sekä ilma- ja vesipiste.',tip:'Sunnuntaisin auki klo 7–24. Lataa ja syö samalla pysähdyksellä.',q:'Circle K Gällivare Parkgatan 1'},
+  {n:'Joker Narvik',cat:'transit',zone:'route',la:68.4369205,lo:17.4268751,d:'Sunnuntaisin avoinna oleva ruokakauppa Narvikin keskustassa, Kongens gate 36:ssa.',tip:'Sunnuntain aukiolo klo 10–21. Osta tästä illallinen ja seuraavan aamun eväät ennen ajoa Vassdaleniin.',q:'Joker Narvik Kongens gate 36'},
   {n:'Bjerkvik pikalataus',cat:'transit',zone:'route',la:68.551244,lo:17.555144,d:'Recharge St1 Bjerkvik: pikalataus E10:n varrella, noin 10 minuutin ajomatkan päässä majapaikasta.',q:'Recharge St1 Bjerkvik'},
   {n:'Svolvær',cat:'transit',zone:'lofoten',la:68.238823,lo:14.566358,d:'Våganin keskus: Tesla Supercharger, ruokakauppoja ja Trollfjord-retkien lähtösatama.',tip:'Täydennä ruokavarastoa täällä; kauppoja on myös Leknesissä ja saariston eteläosissa.',q:'Tesla Supercharger Svolvær'},
   {n:'Leknes',cat:'transit',zone:'lofoten',la:68.148266,lo:13.613752,d:'Vestvågøyn hallinnollinen keskus, jossa on ruokakauppoja ja useiden operaattorien CCS-latausta.',tip:'Lataa ennen Moskenesin yötä, koska varattu leiripaikka on ilman sähköä.',q:'Circle K Leknes'},
@@ -781,10 +783,11 @@ const DAYS = [
   rows:[
    {t:'08:30',i:'move',x:'Lähtö Oulusta (checkout 12 mennessä, mutta matkaan ajoissa) → Tornio/Haparanda',dur:'~1 h 45'},
    {t:'10:00',i:'move',x:'Raja Ruotsiin ja E10:tä pohjoiseen: Överkalix → Gällivare. <b>Kello −1 h</b>'},
-   {t:'12:30',i:'food',x:'Latauslounas '+GL('Eviny Gällivare','Gällivaressa'),dur:'45 min'},
+   {t:'12:30',i:'food',x:'Latauslounas '+G('Circle K Gällivare','Circle K Gällivaressa')+': pikalataus + Pizza Hut',dur:'45 min'},
    {t:'14:30',i:'move',x:'Ohitse '+GL('Kiruna city center','Kirunan')+', kaivoskaupungin, jonka koko keskustaa siirretään parhaillaan',opt:1},
    {t:'16:00',i:'move',x:'Riksgränsen & Bjørnfjell: tunturiylitys Norjaan, E10:n hienoin mantereen osuus'},
-   {t:'18:00',i:'move',x:'Perillä: '+G('Airbnb Vassdalen','Airbnb Vassdalenissa')+' (check-in klo 17 jälkeen)'},
+   {t:'17:15',i:'food',x:'Ruokaostokset illaksi: '+G('Joker Narvik')+' (sunnuntaisin auki klo 10–21)',dur:'30 min'},
+   {t:'18:15',i:'move',x:'Perillä: '+G('Airbnb Vassdalen','Airbnb Vassdalenissa')+' (check-in klo 17 jälkeen)'},
    {t:'19:00',i:'food',x:'Illallinen omista eväistä + varhainen ilta, sillä huomenna alkavat Lofootit'}
   ],
   night:'Bjerkvikin Recharge St1 -pikalataus on 10 minuutin päässä majapaikasta, joten lataus hoidetaan aamulla lähtiessä.'},
