@@ -499,7 +499,7 @@
         <div class="card fcard">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l1.4-4.2A2 2 0 0 1 8.3 5.5h7.4a2 2 0 0 1 1.9 1.3L19 11M5 11h14a2 2 0 0 1 2 2v3.5h-2.6M5 11a2 2 0 0 0-2 2v3.5h2.6m0 0a1.9 1.9 0 1 0 3.8 0m-3.8 0h3.8m6.8 0a1.9 1.9 0 1 0 3.8 0m-3.8 0h3.8m-10.6 0h6.8"/></svg>Menomatka <span class="fsub">la 18. – ma 20.7</span></h3>
           <div class="frow"><div class="fwho">La 18.7 · Espoo → Oulu</div><div class="fdet mono">ESPOO 10:00 → OULU ~19:00 · ~625 km</div></div>
-          <div class="frow"><div class="fwho">Su 19.7 · Oulu → Bjerkvik</div><div class="fdet mono">OULU 08:30 → BJERKVIK ~18:00 · ~675 km</div></div>
+          <div class="frow"><div class="fwho">Su 19.7 · Oulu → Bjerkvik</div><div class="fdet mono">OULU 08:30 → KIIRUNA → BJERKVIK ~17:30 · ~670 km</div></div>
           <div class="frow"><div class="fwho">Ma 20.7 · Bjerkvik → Lofootit</div><div class="fdet mono">BJERKVIK 09:30 → SVOLVÆR ~14:00 · ~214 km</div></div>
         </div>
         <div class="card fcard">
@@ -577,7 +577,7 @@
           <h3>⚡ Latausstrategia</h3>
           <dl class="kv">
             <dt>Suomi</dt><dd>Jyväskylän Supercharger on Vt4-reitin varrella. Tarkista muut lataukset auton navigaattorista matkapäivänä</dd>
-            <dt>Ruotsi · E10</dt><dd>Pohjoisessa verkko harvenee: suunniteltu pysähdys on Circle K Gällivare, jossa on pikalataus ja Pizza Hut. Tarkista Kirunan laturit sovelluksista</dd>
+            <dt>Ruotsi</dt><dd>Pohjoisessa verkko harvenee: suunniteltu pysähdys on Circle K Kiruna Södra, jossa on pikalataus, WC ja asemaruokaa. Tarkista laturin tila auton navigaattorista ennen saapumista</dd>
             <dt>Lofootit</dt><dd>Tesla Superchargerit ovat Svolværissä ja Reinessä; lisäksi Leknesissä, Rambergissa ja Å:ssa on muiden operaattorien CCS-latausta. Tarkista teho ja toimivuus Tesla-, ABRP- tai PlugShare-sovelluksesta</dd>
             <dt>Leirintäyöt</dt><dd>Beach Campilla on 100 maksullista 16 A sähköpaikkaa; Skårungenin sähkö tarkistetaan omasta varauksesta. Moskenesin varattu paikka on ilman sähköä</dd>
             <dt>Paluu</dt><dd>Bodø heti lautan jälkeen täyteen → Silvervägenillä lataus Arjeplog/Arvidsjaur → Luleå</dd>
@@ -696,7 +696,8 @@ const PLACES = [
   {n:'Wiikki Majatalo',cat:'home',zone:'route',days:['d24','d25'],la:63.18192,lo:25.72323,d:'Yö 7 · perinteinen majatalo Viitasaaressa Vt4:n varrella.',tip:'Check-in vain klo 15–18, älä myöhästy. Checkout 8–11.',q:'Wiikki Majatalo Viitasaari'},
 
   /* ---- liikenne & lataus ---- */
-  {n:'Circle K Gällivare',cat:'transit',zone:'route',la:67.1381331,lo:20.6595805,d:'Pikalatausasema Parkgatan 1:ssä. Asemalla on Pizza Hut, istumapaikkoja, WC sekä ilma- ja vesipiste.',tip:'Sunnuntaisin auki klo 7–24. Lataa ja syö samalla pysähdyksellä.',q:'Circle K Gällivare Parkgatan 1'},
+  {n:'Circle K Kiruna Södra',cat:'transit',zone:'route',days:['d19'],la:67.8479856,lo:20.2761117,d:'Pikalatausasema Industrivägen 17:ssä. Asemalla on ruokaa, kahvia, WC sekä ilma- ja vesipiste.',tip:'Sunnuntaisin auki klo 8–22. Tarkista vapaat latauspisteet auton navigaattorista ennen saapumista.',q:'Circle K Kiruna Södra Industrivägen 17'},
+  {n:'Spill Saluhall & Eatery',cat:'food',zone:'route',days:['d19'],la:67.8469663,lo:20.2909959,d:'Ravintola ja deli Lastvägen 54:ssä, noin 700 metriä Circle K Kiruna Södrasta.',tip:'Sunnuntaisin auki klo 10–23; keittiö klo 22 asti. Brunssi klo 11–14, lisäksi toastit, bowlit ja iltamenu.',q:'Spill Saluhall Eatery Lastvägen 54 Kiruna'},
   {n:'Joker Narvik',cat:'transit',zone:'route',la:68.4369205,lo:17.4268751,d:'Sunnuntaisin avoinna oleva ruokakauppa Narvikin keskustassa, Kongens gate 36:ssa.',tip:'Sunnuntain aukiolo klo 10–21. Osta tästä illallinen ja seuraavan aamun eväät ennen ajoa Vassdaleniin.',q:'Joker Narvik Kongens gate 36'},
   {n:'Bjerkvik pikalataus',cat:'transit',zone:'route',la:68.551244,lo:17.555144,d:'Recharge St1 Bjerkvik: pikalataus E10:n varrella, noin 10 minuutin ajomatkan päässä majapaikasta.',q:'Recharge St1 Bjerkvik'},
   {n:'Svolvær',cat:'transit',zone:'lofoten',la:68.238823,lo:14.566358,d:'Våganin keskus: Tesla Supercharger, ruokakauppoja ja Trollfjord-retkien lähtösatama.',tip:'Täydennä ruokavarastoa täällä; kauppoja on myös Leknesissä ja saariston eteläosissa.',q:'Tesla Supercharger Svolvær'},
@@ -778,18 +779,17 @@ const DAYS = [
    {t:'20:15',i:'food',x:'Illallinen: '+G('Sokeri-Jussin Kievari','Sokeri-Jussin Kievari')+' <i class="eur">€€</i> Pikisaaressa',dur:'1,5 h'},
    {t:'21:45',i:'beach',x:'Valoisan kesäillan kävely: '+G('Nallikari','Nallikarin ranta'),dur:'1 h',opt:1}
   ],
-  night:'Huomenna on reissun pisin ajopäivä, noin 675 km. Ruotsissa ja Norjassa kello on tunnin Suomea jäljessä. Puhelin vaihtaa ajan yleensä itse, mutta auton kello kannattaa tarkistaa.'},
+  night:'Huomenna on reissun pisin ajopäivä, noin 670 km. Ruotsissa ja Norjassa kello on tunnin Suomea jäljessä. Puhelin vaihtaa ajan yleensä itse, mutta auton kello kannattaa tarkistaa.'},
 
- {date:'Sunnuntai 19.7',c:'var(--sea)',title:'Oulu → Ruotsin läpi → Bjerkvik',who:'~675 km · E10',
+ {date:'Sunnuntai 19.7',c:'var(--sea)',title:'Oulu → Kiiruna → Bjerkvik',who:'~670 km',
   rows:[
    {t:'08:30',i:'move',x:'Lähtö Oulusta (checkout 12 mennessä, mutta matkaan ajoissa) → Tornio/Haparanda',dur:'~1 h 45'},
-   {t:'10:00',i:'move',x:'Raja Ruotsiin ja E10:tä pohjoiseen: Överkalix → Gällivare. <b>Kello −1 h</b>'},
-   {t:'12:30',i:'food',x:'Latauslounas '+G('Circle K Gällivare','Circle K Gällivaressa')+': pikalataus + Pizza Hut',dur:'45 min'},
-   {t:'14:30',i:'move',x:'Ohitse '+GL('Kiruna city center','Kirunan')+', kaivoskaupungin, jonka koko keskustaa siirretään parhaillaan',opt:1},
-   {t:'16:00',i:'move',x:'Riksgränsen & Bjørnfjell: tunturiylitys Norjaan, E10:n hienoin mantereen osuus'},
-   {t:'17:15',i:'food',x:'Ruokaostokset illaksi: '+G('Joker Narvik')+' (sunnuntaisin auki klo 10–21)',dur:'30 min'},
-   {t:'18:15',i:'move',x:'Perillä: '+G('Airbnb Vassdalen','Airbnb Vassdalenissa')+' (check-in klo 17 jälkeen)'},
-   {t:'19:00',i:'food',x:'Illallinen omista eväistä + varhainen ilta, sillä huomenna alkavat Lofootit'}
+   {t:'09:15',i:'move',x:'Raja Ruotsiin. <b>Kello −1 h</b> → Pajalan ja Vittangin kautta Kiirunaan'},
+   {t:'13:15',i:'food',x:'Pikalataus + lounas '+G('Circle K Kiruna Södra','Circle K Kiruna Södrassa')+'. Asemaruoka tai '+G('Spill Saluhall & Eatery','Spill')+' noin 700 m päässä',dur:'45–60 min'},
+   {t:'15:30',i:'move',x:'Riksgränsen & Bjørnfjell: tunturiylitys Norjaan, E10:n hienoin mantereen osuus'},
+   {t:'16:30',i:'food',x:'Ruokaostokset illaksi: '+G('Joker Narvik')+' (sunnuntaisin auki klo 10–21)',dur:'30 min'},
+   {t:'17:30',i:'move',x:'Perillä: '+G('Airbnb Vassdalen','Airbnb Vassdalenissa')+' (check-in klo 17 jälkeen)'},
+   {t:'18:00',i:'food',x:'Illallinen omista eväistä + varhainen ilta, sillä huomenna alkavat Lofootit'}
   ],
   night:'Bjerkvikin Recharge St1 -pikalataus on 10 minuutin päässä majapaikasta, joten lataus hoidetaan aamulla lähtiessä.'},
 
